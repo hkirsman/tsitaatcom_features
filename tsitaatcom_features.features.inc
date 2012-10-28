@@ -10,35 +10,35 @@
 function tsitaatcom_features_node_info() {
   $items = array(
     'quote' => array(
-      'name' => t('Tsitaat'),
+      'name' => t('Quote'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Pealkiri'),
       'help' => '',
     ),
     'quote_author' => array(
-      'name' => t('quote author'),
+      'name' => t('Quote author'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Pealkiri'),
       'help' => '',
     ),
     'quote_category' => array(
-      'name' => t('quote_category'),
+      'name' => t('Quote_category'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Pealkiri'),
       'help' => '',
     ),
     'quote_source' => array(
-      'name' => t('quote source'),
+      'name' => t('Quote source'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Pealkiri'),
       'help' => '',
     ),
   );
