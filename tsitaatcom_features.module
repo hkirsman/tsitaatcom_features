@@ -1,0 +1,7 @@
+<?php
+/**
+ * @file
+ * Code for the tsitaatcom_features feature.
+ */
+
+include_once 'tsitaatcom_features.features.inc';
