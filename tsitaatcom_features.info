@@ -1,6 +1,6 @@
 name = Tsitaatcom features
 core = 7.x
-package = Features
+package = Tsitaat.com
 version = 7.x-1.0
 project = tsitaatcom_features
 dependencies[] = entityreference
