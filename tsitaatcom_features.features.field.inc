@@ -28,17 +28,21 @@ function tsitaatcom_features_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => 'Ei',
-          1 => 'Jah',
+          0 => 'No',
+          1 => 'Yes',
         ),
         'allowed_values_function' => '',
       ),
       'translatable' => '0',
-      'type' => 'list_integer',
+      'type' => 'list_boolean',
     ),
     'field_instance' => array(
       'bundle' => 'quote',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
       'deleted' => '0',
       'description' => '',
       'display' => array(
@@ -66,8 +70,10 @@ function tsitaatcom_features_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
         'weight' => '26',
       ),
     ),
@@ -1996,26 +2002,30 @@ function tsitaatcom_features_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => 'Ei',
-          1 => 'Jah',
+          0 => 'No',
+          1 => 'Yes',
         ),
         'allowed_values_function' => '',
       ),
       'translatable' => '0',
-      'type' => 'list_integer',
+      'type' => 'list_boolean',
     ),
     'field_instance' => array(
       'bundle' => 'quote_author',
-      'default_value' => NULL,
+      'default_value' => array(
+        0 => array(
+          'value' => 0,
+        ),
+      ),
       'deleted' => '0',
-      'description' => 'Old field.',
+      'description' => '',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 49,
+          'weight' => 55,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2034,9 +2044,11 @@ function tsitaatcom_features_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
-        'weight' => '39',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
+        'weight' => '38',
       ),
     ),
   );
@@ -2130,19 +2142,19 @@ function tsitaatcom_features_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => 'Ei',
-          1 => 'Jah',
+          0 => 'No',
+          1 => 'Yes',
         ),
         'allowed_values_function' => '',
       ),
       'translatable' => '0',
-      'type' => 'list_integer',
+      'type' => 'list_boolean',
     ),
     'field_instance' => array(
       'bundle' => 'quote_author',
       'default_value' => array(
         0 => array(
-          'value' => '0',
+          'value' => 0,
         ),
       ),
       'deleted' => '0',
@@ -2153,7 +2165,7 @@ function tsitaatcom_features_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 46,
+          'weight' => 52,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2172,8 +2184,10 @@ function tsitaatcom_features_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
         'weight' => '21',
       ),
     ),
@@ -2197,20 +2211,19 @@ function tsitaatcom_features_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => 'Ei',
-          1 => 'Jah',
+          0 => 'No',
+          1 => 'Yes',
         ),
         'allowed_values_function' => '',
-        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
-      'type' => 'list_integer',
+      'type' => 'list_boolean',
     ),
     'field_instance' => array(
       'bundle' => 'quote_author',
       'default_value' => array(
         0 => array(
-          'value' => '0',
+          'value' => 0,
         ),
       ),
       'deleted' => '0',
@@ -2221,7 +2234,7 @@ function tsitaatcom_features_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 37,
+          'weight' => 51,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2232,17 +2245,18 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_author_born_death_circa',
-      'label' => 'Born_death_circa',
+      'label' => 'Born death circa',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
         'weight' => '19',
       ),
     ),
@@ -2337,19 +2351,19 @@ function tsitaatcom_features_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => 'Ei',
-          1 => 'Jah',
+          0 => 'No',
+          1 => 'Yes',
         ),
         'allowed_values_function' => '',
       ),
       'translatable' => '0',
-      'type' => 'list_integer',
+      'type' => 'list_boolean',
     ),
     'field_instance' => array(
       'bundle' => 'quote_author',
       'default_value' => array(
         0 => array(
-          'value' => '0',
+          'value' => 0,
         ),
       ),
       'deleted' => '0',
@@ -2360,7 +2374,7 @@ function tsitaatcom_features_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 47,
+          'weight' => 53,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -2379,8 +2393,10 @@ function tsitaatcom_features_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
         'weight' => '23',
       ),
     ),
@@ -4309,19 +4325,19 @@ function tsitaatcom_features_field_default_fields() {
       'module' => 'list',
       'settings' => array(
         'allowed_values' => array(
-          0 => 'Ei',
-          1 => 'Jah',
+          0 => 'No',
+          1 => 'Yes',
         ),
         'allowed_values_function' => '',
       ),
       'translatable' => '0',
-      'type' => 'list_integer',
+      'type' => 'list_boolean',
     ),
     'field_instance' => array(
       'bundle' => 'quote_author',
       'default_value' => array(
         0 => array(
-          'value' => '0',
+          'value' => 0,
         ),
       ),
       'deleted' => '0',
@@ -4332,7 +4348,7 @@ function tsitaatcom_features_field_default_fields() {
           'module' => 'list',
           'settings' => array(),
           'type' => 'list_default',
-          'weight' => 48,
+          'weight' => 54,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -4351,8 +4367,10 @@ function tsitaatcom_features_field_default_fields() {
       'widget' => array(
         'active' => 1,
         'module' => 'options',
-        'settings' => array(),
-        'type' => 'options_select',
+        'settings' => array(
+          'display_label' => 1,
+        ),
+        'type' => 'options_onoff',
         'weight' => '29',
       ),
     ),
@@ -4798,7 +4816,7 @@ function tsitaatcom_features_field_default_fields() {
   t('Body');
   t('Born');
   t('Born circa');
-  t('Born_death_circa');
+  t('Born death circa');
   t('Category old');
   t('Death');
   t('Death circa');
