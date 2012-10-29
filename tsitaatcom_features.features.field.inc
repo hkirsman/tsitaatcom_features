@@ -2018,7 +2018,7 @@ function tsitaatcom_features_field_default_fields() {
         ),
       ),
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
