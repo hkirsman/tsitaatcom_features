@@ -2108,7 +2108,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Born',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2317,7 +2316,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Death',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2457,7 +2455,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Firstname',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2528,7 +2525,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Firstname de',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2599,7 +2595,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Firstname en',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2670,7 +2665,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Firstname et',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2741,7 +2735,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Lastname',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2812,7 +2805,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Lastname de',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2883,7 +2875,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Lastname en',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -2954,7 +2945,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Lastname et',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3025,7 +3015,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Midname',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3096,7 +3085,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Midname de',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3167,7 +3155,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Midname en',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3238,7 +3225,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Midname et',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3309,7 +3295,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Name amazon',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3380,7 +3365,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Name freeform',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3451,7 +3435,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Name freeform de',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3522,7 +3505,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Name freeform en',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3593,7 +3575,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Name freeform et',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3664,7 +3645,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Nationality',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -3735,7 +3715,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Profession',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -4016,7 +3995,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Wiki url',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -4084,7 +4062,7 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_author_wiki_url_de',
-      'label' => 'Wiki_url_de',
+      'label' => 'Wiki url de',
       'required' => 0,
       'settings' => array(
         'text_processing' => '0',
@@ -4288,9 +4266,8 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_id',
       'label' => 'Id',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -4431,7 +4408,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Urlfriendly author name',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -4857,9 +4833,9 @@ function tsitaatcom_features_field_default_fields() {
   t('Urlfriendly author name et');
   t('Use this for better search from amazon. It\'s not used anymore.');
   t('Wiki url');
+  t('Wiki url de');
   t('Wiki url en');
   t('Wiki url et');
-  t('Wiki_url_de');
   t('Zitate de category');
   t('author2_id');
   t('author2_id_new');
