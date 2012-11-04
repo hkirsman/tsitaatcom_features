@@ -10,6 +10,86 @@
 function tsitaatcom_features_field_default_fields() {
   $fields = array();
 
+  // Exported field: 'node-portrait-field_portrait'.
+  $fields['node-portrait-field_portrait'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_portrait',
+      'foreign keys' => array(
+        'fid' => array(
+          'columns' => array(
+            'fid' => 'fid',
+          ),
+          'table' => 'file_managed',
+        ),
+      ),
+      'indexes' => array(
+        'fid' => array(
+          0 => 'fid',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'image',
+      'settings' => array(
+        'default_image' => 0,
+        'uri_scheme' => 'public',
+      ),
+      'translatable' => '0',
+      'type' => 'image',
+    ),
+    'field_instance' => array(
+      'bundle' => 'portrait',
+      'deleted' => '0',
+      'description' => '',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'image',
+          'settings' => array(
+            'image_link' => '',
+            'image_style' => '',
+          ),
+          'type' => 'image',
+          'weight' => 1,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_portrait',
+      'label' => 'Portrait',
+      'required' => 0,
+      'settings' => array(
+        'alt_field' => 1,
+        'default_image' => 0,
+        'file_directory' => '',
+        'file_extensions' => 'png gif jpg jpeg',
+        'max_filesize' => '',
+        'max_resolution' => '',
+        'min_resolution' => '',
+        'title_field' => 1,
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'image',
+        'settings' => array(
+          'preview_image_style' => 'thumbnail',
+          'progress_indicator' => 'throbber',
+        ),
+        'type' => 'image_image',
+        'weight' => '-2',
+      ),
+    ),
+  );
+
   // Exported field: 'node-quote-field_active'.
   $fields['node-quote-field_active'] = array(
     'field_config' => array(
@@ -44,7 +124,7 @@ function tsitaatcom_features_field_default_fields() {
         ),
       ),
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -79,85 +159,14 @@ function tsitaatcom_features_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-quote-field_author2_id'.
-  $fields['node-quote-field_author2_id'] = array(
+  // Exported field: 'node-quote-field_author'.
+  $fields['node-quote-field_author'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '2',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_author2_id',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'max_length' => '255',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'quote',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 9,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_author2_id',
-      'label' => 'author2_id',
-      'required' => 0,
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '12',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-quote-field_author2_id_new'.
-  $fields['node-quote-field_author2_id_new'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_author2_id_new',
+      'field_name' => 'field_author',
       'foreign keys' => array(
         'node' => array(
           'columns' => array(
@@ -174,7 +183,6 @@ function tsitaatcom_features_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
@@ -183,16 +191,12 @@ function tsitaatcom_features_field_default_fields() {
             ),
           ),
           'sort' => array(
-            'direction' => 'ASC',
-            'field' => 'taxonomy_forums:tid',
-            'property' => 'nid',
             'type' => 'none',
           ),
           'target_bundles' => array(
             'quote_author' => 'quote_author',
           ),
         ),
-        'handler_submit' => 'Change handler',
         'target_type' => 'node',
       ),
       'translatable' => '0',
@@ -211,7 +215,7 @@ function tsitaatcom_features_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 26,
+          'weight' => 42,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -221,11 +225,10 @@ function tsitaatcom_features_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_author2_id_new',
-      'label' => 'author2_id_new',
+      'field_name' => 'field_author',
+      'label' => 'Author',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -236,7 +239,69 @@ function tsitaatcom_features_field_default_fields() {
           'path' => '',
           'size' => '60',
         ),
-        'type' => 'entityreference_autocomplete',
+        'type' => 'entityreference_autocomplete_tags',
+        'weight' => '11',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-quote-field_author2_id'.
+  $fields['node-quote-field_author2_id'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_author2_id',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'quote',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Old field.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 48,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_author2_id',
+      'label' => 'Author2 id',
+      'required' => 0,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
         'weight' => '13',
       ),
     ),
@@ -250,96 +315,11 @@ function tsitaatcom_features_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_author_id',
-      'foreign keys' => array(
-        'node' => array(
-          'columns' => array(
-            'target_id' => 'nid',
-          ),
-          'table' => 'node',
-        ),
-      ),
-      'indexes' => array(
-        'target_id' => array(
-          0 => 'target_id',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'entityreference',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'handler' => 'base',
-        'handler_settings' => array(
-          'sort' => array(
-            'type' => 'none',
-          ),
-          'target_bundles' => array(
-            'quote_author' => 'quote_author',
-          ),
-        ),
-        'target_type' => 'node',
-      ),
-      'translatable' => '0',
-      'type' => 'entityreference',
-    ),
-    'field_instance' => array(
-      'bundle' => 'quote',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'entityreference',
-          'settings' => array(
-            'link' => FALSE,
-          ),
-          'type' => 'entityreference_label',
-          'weight' => 38,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_author_id',
-      'label' => 'Author id',
-      'required' => 1,
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'entityreference',
-        'settings' => array(
-          'match_operator' => 'CONTAINS',
-          'path' => '',
-          'size' => '60',
-        ),
-        'type' => 'entityreference_autocomplete',
-        'weight' => '10',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-quote-field_author_id_old'.
-  $fields['node-quote-field_author_id_old'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_author_id_old',
       'foreign keys' => array(),
       'indexes' => array(),
       'locked' => '0',
       'module' => 'number',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-      ),
+      'settings' => array(),
       'translatable' => '0',
       'type' => 'number_integer',
     ),
@@ -347,7 +327,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -359,7 +339,7 @@ function tsitaatcom_features_field_default_fields() {
             'thousand_separator' => ' ',
           ),
           'type' => 'number_integer',
-          'weight' => 37,
+          'weight' => 43,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -369,11 +349,10 @@ function tsitaatcom_features_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_author_id_old',
-      'label' => 'author_id_old',
-      'required' => 1,
+      'field_name' => 'field_author_id',
+      'label' => 'Author id',
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -385,7 +364,7 @@ function tsitaatcom_features_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '11',
+        'weight' => '12',
       ),
     ),
   );
@@ -430,7 +409,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Set default category after features import.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -448,8 +427,8 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_category',
-      'label' => 'category',
-      'required' => 0,
+      'label' => 'Category',
+      'required' => 1,
       'settings' => array(
         'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
@@ -459,7 +438,7 @@ function tsitaatcom_features_field_default_fields() {
         'module' => 'options',
         'settings' => array(),
         'type' => 'options_select',
-        'weight' => '27',
+        'weight' => '6',
       ),
     ),
   );
@@ -486,7 +465,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -510,9 +489,8 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_category_old',
       'label' => 'Category old',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -524,7 +502,7 @@ function tsitaatcom_features_field_default_fields() {
         'module' => 'number',
         'settings' => array(),
         'type' => 'number',
-        'weight' => '6',
+        'weight' => '7',
       ),
     ),
   );
@@ -538,82 +516,11 @@ function tsitaatcom_features_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_created_by',
       'foreign keys' => array(
-        'format' => array(
+        'node' => array(
           'columns' => array(
-            'format' => 'format',
+            'target_id' => 'nid',
           ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'max_length' => '255',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'quote',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 17,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_created_by',
-      'label' => 'created_by',
-      'required' => 0,
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '22',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-quote-field_created_by_new'.
-  $fields['node-quote-field_created_by_new'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_created_by_new',
-      'foreign keys' => array(
-        'users' => array(
-          'columns' => array(
-            'target_id' => 'uid',
-          ),
-          'table' => 'users',
+          'table' => 'node',
         ),
       ),
       'indexes' => array(
@@ -624,7 +531,6 @@ function tsitaatcom_features_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
@@ -633,14 +539,10 @@ function tsitaatcom_features_field_default_fields() {
             ),
           ),
           'sort' => array(
-            'direction' => 'ASC',
-            'field' => 'none',
-            'property' => 'uid',
             'type' => 'none',
           ),
           'target_bundles' => array(),
         ),
-        'handler_submit' => 'Change handler',
         'target_type' => 'user',
       ),
       'translatable' => '0',
@@ -650,7 +552,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -659,7 +561,7 @@ function tsitaatcom_features_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 28,
+          'weight' => 41,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -669,11 +571,10 @@ function tsitaatcom_features_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_created_by_new',
-      'label' => 'created_by_new',
-      'required' => 1,
+      'field_name' => 'field_created_by',
+      'label' => 'Created by',
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -685,6 +586,68 @@ function tsitaatcom_features_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
+        'weight' => '22',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-quote-field_created_by_old'.
+  $fields['node-quote-field_created_by_old'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_created_by_old',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'quote',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Old field.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 40,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_created_by_old',
+      'label' => 'Created by old',
+      'required' => 0,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
         'weight' => '23',
       ),
     ),
@@ -724,7 +687,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -742,10 +705,9 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_created_time',
-      'label' => 'created_time',
+      'label' => 'Created time',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -783,7 +745,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -807,9 +769,8 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_id',
       'label' => 'Id',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '0',
         'prefix' => '',
@@ -858,13 +819,9 @@ function tsitaatcom_features_field_default_fields() {
     ),
     'field_instance' => array(
       'bundle' => 'quote',
-      'default_value' => array(
-        0 => array(
-          'value' => 'et',
-        ),
-      ),
+      'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -883,9 +840,8 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_lang',
       'label' => 'Language',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -923,7 +879,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -947,9 +903,8 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_q_id',
       'label' => 'Quote id',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '0',
         'prefix' => '',
@@ -1020,7 +975,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Quote',
       'required' => 1,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1086,9 +1040,8 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_rank',
       'label' => 'Rank',
-      'required' => 1,
+      'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'max' => '',
         'min' => '',
         'prefix' => '',
@@ -1113,40 +1066,31 @@ function tsitaatcom_features_field_default_fields() {
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_revision',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
+      'foreign keys' => array(),
+      'indexes' => array(),
       'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'max_length' => '255',
-      ),
+      'module' => 'number',
+      'settings' => array(),
       'translatable' => '0',
-      'type' => 'text',
+      'type' => 'number_integer',
     ),
     'field_instance' => array(
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 19,
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 47,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1157,104 +1101,33 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_revision',
-      'label' => 'revision',
+      'label' => 'Revision',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'text_processing' => '0',
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
         'weight' => '25',
       ),
     ),
   );
 
-  // Exported field: 'node-quote-field_source_id'.
-  $fields['node-quote-field_source_id'] = array(
+  // Exported field: 'node-quote-field_source'.
+  $fields['node-quote-field_source'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_source_id',
-      'foreign keys' => array(
-        'format' => array(
-          'columns' => array(
-            'format' => 'format',
-          ),
-          'table' => 'filter_format',
-        ),
-      ),
-      'indexes' => array(
-        'format' => array(
-          0 => 'format',
-        ),
-      ),
-      'locked' => '0',
-      'module' => 'text',
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'max_length' => '255',
-      ),
-      'translatable' => '0',
-      'type' => 'text',
-    ),
-    'field_instance' => array(
-      'bundle' => 'quote',
-      'default_value' => NULL,
-      'deleted' => '0',
-      'description' => '',
-      'display' => array(
-        'default' => array(
-          'label' => 'above',
-          'module' => 'text',
-          'settings' => array(),
-          'type' => 'text_default',
-          'weight' => 10,
-        ),
-        'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
-          'weight' => 0,
-        ),
-      ),
-      'entity_type' => 'node',
-      'field_name' => 'field_source_id',
-      'label' => 'source_id',
-      'required' => 0,
-      'settings' => array(
-        'entity_translation_sync' => FALSE,
-        'text_processing' => '0',
-        'user_register_form' => FALSE,
-      ),
-      'widget' => array(
-        'active' => 1,
-        'module' => 'text',
-        'settings' => array(
-          'size' => '60',
-        ),
-        'type' => 'text_textfield',
-        'weight' => '14',
-      ),
-    ),
-  );
-
-  // Exported field: 'node-quote-field_source_id_new'.
-  $fields['node-quote-field_source_id_new'] = array(
-    'field_config' => array(
-      'active' => '1',
-      'cardinality' => '1',
-      'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_source_id_new',
+      'field_name' => 'field_source',
       'foreign keys' => array(
         'node' => array(
           'columns' => array(
@@ -1271,7 +1144,6 @@ function tsitaatcom_features_field_default_fields() {
       'locked' => '0',
       'module' => 'entityreference',
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'handler' => 'base',
         'handler_settings' => array(
           'behaviors' => array(
@@ -1280,16 +1152,12 @@ function tsitaatcom_features_field_default_fields() {
             ),
           ),
           'sort' => array(
-            'direction' => 'ASC',
-            'field' => 'taxonomy_forums:tid',
-            'property' => 'nid',
             'type' => 'none',
           ),
           'target_bundles' => array(
             'quote_source' => 'quote_source',
           ),
         ),
-        'handler_submit' => 'Change handler',
         'target_type' => 'node',
       ),
       'translatable' => '0',
@@ -1308,7 +1176,7 @@ function tsitaatcom_features_field_default_fields() {
             'link' => FALSE,
           ),
           'type' => 'entityreference_label',
-          'weight' => 27,
+          'weight' => 44,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1318,11 +1186,10 @@ function tsitaatcom_features_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_source_id_new',
-      'label' => 'source_id_new',
+      'field_name' => 'field_source',
+      'label' => 'Source',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
@@ -1334,6 +1201,68 @@ function tsitaatcom_features_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'entityreference_autocomplete',
+        'weight' => '14',
+      ),
+    ),
+  );
+
+  // Exported field: 'node-quote-field_source_id'.
+  $fields['node-quote-field_source_id'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_source_id',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'quote',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Old field.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 45,
+        ),
+        'teaser' => array(
+          'label' => 'above',
+          'settings' => array(),
+          'type' => 'hidden',
+          'weight' => 0,
+        ),
+      ),
+      'entity_type' => 'node',
+      'field_name' => 'field_source_id',
+      'label' => 'Source id',
+      'required' => 0,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
         'weight' => '15',
       ),
     ),
@@ -1373,7 +1302,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1391,10 +1320,9 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_source_title',
-      'label' => 'source_title',
+      'label' => 'Source title',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1444,7 +1372,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1462,10 +1390,9 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_source_title_extra_prefix',
-      'label' => 'source_title_extra_prefix',
+      'label' => 'Source title extra prefix',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1481,14 +1408,14 @@ function tsitaatcom_features_field_default_fields() {
     ),
   );
 
-  // Exported field: 'node-quote-field_source_title_extra_sufix'.
-  $fields['node-quote-field_source_title_extra_sufix'] = array(
+  // Exported field: 'node-quote-field_source_title_extra_suffix'.
+  $fields['node-quote-field_source_title_extra_suffix'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
       'entity_types' => array(),
-      'field_name' => 'field_source_title_extra_sufix',
+      'field_name' => 'field_source_title_extra_suffix',
       'foreign keys' => array(
         'format' => array(
           'columns' => array(
@@ -1505,7 +1432,6 @@ function tsitaatcom_features_field_default_fields() {
       'locked' => '0',
       'module' => 'text',
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'max_length' => '255',
       ),
       'translatable' => '0',
@@ -1515,14 +1441,14 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
           'module' => 'text',
           'settings' => array(),
           'type' => 'text_default',
-          'weight' => 12,
+          'weight' => 46,
         ),
         'teaser' => array(
           'label' => 'above',
@@ -1532,11 +1458,10 @@ function tsitaatcom_features_field_default_fields() {
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_source_title_extra_sufix',
-      'label' => 'source_title_extra_sufix',
+      'field_name' => 'field_source_title_extra_suffix',
+      'label' => 'Source title extra suffix',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1586,7 +1511,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1604,10 +1529,9 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_source_year_end',
-      'label' => 'source_year_end',
+      'label' => 'Source year end',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1657,7 +1581,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1675,10 +1599,9 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_source_year_start',
-      'label' => 'source_year_start',
+      'label' => 'Source year start',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1728,7 +1651,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1746,10 +1669,9 @@ function tsitaatcom_features_field_default_fields() {
       ),
       'entity_type' => 'node',
       'field_name' => 'field_source_year_start_circa',
-      'label' => 'source_year_start_circa',
+      'label' => 'Source year start circa',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1769,7 +1691,7 @@ function tsitaatcom_features_field_default_fields() {
   $fields['node-quote-field_tag'] = array(
     'field_config' => array(
       'active' => '1',
-      'cardinality' => '1',
+      'cardinality' => '10',
       'deleted' => '0',
       'entity_types' => array(),
       'field_name' => 'field_tag',
@@ -1837,7 +1759,7 @@ function tsitaatcom_features_field_default_fields() {
           'size' => 60,
         ),
         'type' => 'taxonomy_autocomplete',
-        'weight' => '8',
+        'weight' => '9',
       ),
     ),
   );
@@ -1876,7 +1798,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1897,7 +1819,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Tag old',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1908,7 +1829,7 @@ function tsitaatcom_features_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '9',
+        'weight' => '10',
       ),
     ),
   );
@@ -1947,7 +1868,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
@@ -1968,7 +1889,6 @@ function tsitaatcom_features_field_default_fields() {
       'label' => 'Zitate de category',
       'required' => 0,
       'settings' => array(
-        'entity_translation_sync' => FALSE,
         'text_processing' => '0',
         'user_register_form' => FALSE,
       ),
@@ -1979,7 +1899,7 @@ function tsitaatcom_features_field_default_fields() {
           'size' => '60',
         ),
         'type' => 'text_textfield',
-        'weight' => '7',
+        'weight' => '8',
       ),
     ),
   );
@@ -2733,7 +2653,7 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_author_lastname',
       'label' => 'Lastname',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -4406,7 +4326,7 @@ function tsitaatcom_features_field_default_fields() {
       'entity_type' => 'node',
       'field_name' => 'field_urlfriendly_author_name',
       'label' => 'Urlfriendly author name',
-      'required' => 0,
+      'required' => 1,
       'settings' => array(
         'text_processing' => '0',
         'user_register_form' => FALSE,
@@ -4785,15 +4705,205 @@ function tsitaatcom_features_field_default_fields() {
     ),
   );
 
+  // Exported field: 'taxonomy_term-quote_category-field_id'.
+  $fields['taxonomy_term-quote_category-field_id'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_id',
+      'foreign keys' => array(),
+      'indexes' => array(),
+      'locked' => '0',
+      'module' => 'number',
+      'settings' => array(
+        'entity_translation_sync' => FALSE,
+      ),
+      'translatable' => '0',
+      'type' => 'number_integer',
+    ),
+    'field_instance' => array(
+      'bundle' => 'quote_category',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Old field.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'number',
+          'settings' => array(
+            'decimal_separator' => '.',
+            'prefix_suffix' => TRUE,
+            'scale' => 0,
+            'thousand_separator' => ' ',
+          ),
+          'type' => 'number_integer',
+          'weight' => 1,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_id',
+      'label' => 'Id',
+      'required' => 0,
+      'settings' => array(
+        'max' => '',
+        'min' => '',
+        'prefix' => '',
+        'suffix' => '',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 0,
+        'module' => 'number',
+        'settings' => array(),
+        'type' => 'number',
+        'weight' => '1',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-quote_category-field_name_en'.
+  $fields['taxonomy_term-quote_category-field_name_en'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_name_en',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'quote_category',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Old field.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 3,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_name_en',
+      'label' => 'Name en',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '3',
+      ),
+    ),
+  );
+
+  // Exported field: 'taxonomy_term-quote_category-field_name_et'.
+  $fields['taxonomy_term-quote_category-field_name_et'] = array(
+    'field_config' => array(
+      'active' => '1',
+      'cardinality' => '1',
+      'deleted' => '0',
+      'entity_types' => array(),
+      'field_name' => 'field_name_et',
+      'foreign keys' => array(
+        'format' => array(
+          'columns' => array(
+            'format' => 'format',
+          ),
+          'table' => 'filter_format',
+        ),
+      ),
+      'indexes' => array(
+        'format' => array(
+          0 => 'format',
+        ),
+      ),
+      'locked' => '0',
+      'module' => 'text',
+      'settings' => array(
+        'max_length' => '255',
+      ),
+      'translatable' => '0',
+      'type' => 'text',
+    ),
+    'field_instance' => array(
+      'bundle' => 'quote_category',
+      'default_value' => NULL,
+      'deleted' => '0',
+      'description' => 'Old field.',
+      'display' => array(
+        'default' => array(
+          'label' => 'above',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 2,
+        ),
+      ),
+      'entity_type' => 'taxonomy_term',
+      'field_name' => 'field_name_et',
+      'label' => 'Name et',
+      'required' => 0,
+      'settings' => array(
+        'text_processing' => '0',
+        'user_register_form' => FALSE,
+      ),
+      'widget' => array(
+        'active' => 1,
+        'module' => 'text',
+        'settings' => array(
+          'size' => '60',
+        ),
+        'type' => 'text_textfield',
+        'weight' => '2',
+      ),
+    ),
+  );
+
   // Translatables
   // Included for use with string extractors like potx.
   t('Active');
+  t('Author');
   t('Author id');
+  t('Author2 id');
   t('Body');
   t('Born');
   t('Born circa');
   t('Born death circa');
+  t('Category');
   t('Category old');
+  t('Created by');
+  t('Created by old');
+  t('Created time');
   t('Death');
   t('Death circa');
   t('Firstname');
@@ -4812,12 +4922,15 @@ function tsitaatcom_features_field_default_fields() {
   t('Midname en');
   t('Midname et');
   t('Name amazon');
+  t('Name en');
+  t('Name et');
   t('Name freeform');
   t('Name freeform de');
   t('Name freeform en');
   t('Name freeform et');
   t('Nationality');
   t('Old field.');
+  t('Portrait');
   t('Profession');
   t('Profession de');
   t('Profession en');
@@ -4825,6 +4938,16 @@ function tsitaatcom_features_field_default_fields() {
   t('Quote');
   t('Quote id');
   t('Rank');
+  t('Revision');
+  t('Set default category after features import.');
+  t('Source');
+  t('Source id');
+  t('Source title');
+  t('Source title extra prefix');
+  t('Source title extra suffix');
+  t('Source year end');
+  t('Source year start');
+  t('Source year start circa');
   t('Tag');
   t('Tag old');
   t('Urlfriendly author name');
@@ -4837,22 +4960,6 @@ function tsitaatcom_features_field_default_fields() {
   t('Wiki url en');
   t('Wiki url et');
   t('Zitate de category');
-  t('author2_id');
-  t('author2_id_new');
-  t('author_id_old');
-  t('category');
-  t('created_by');
-  t('created_by_new');
-  t('created_time');
-  t('revision');
-  t('source_id');
-  t('source_id_new');
-  t('source_title');
-  t('source_title_extra_prefix');
-  t('source_title_extra_sufix');
-  t('source_year_end');
-  t('source_year_start');
-  t('source_year_start_circa');
 
   return $fields;
 }

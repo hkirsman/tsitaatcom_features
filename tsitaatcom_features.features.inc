@@ -9,6 +9,14 @@
  */
 function tsitaatcom_features_node_info() {
   $items = array(
+    'portrait' => array(
+      'name' => t('Author Portrait'),
+      'base' => 'node_content',
+      'description' => '',
+      'has_title' => '1',
+      'title_label' => t('Title'),
+      'help' => '',
+    ),
     'quote' => array(
       'name' => t('Quote'),
       'base' => 'node_content',
