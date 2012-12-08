@@ -13,6 +13,7 @@ dependencies[] = number
 dependencies[] = options
 dependencies[] = taxonomy
 dependencies[] = text
+dependencies[] = tsitaatcom
 features[features_api][] = api:1
 features[field][] = node-portrait-field_portrait
 features[field][] = node-quote-field_active
