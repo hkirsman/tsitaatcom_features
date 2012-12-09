@@ -5,6 +5,13 @@
  */
 
 /**
+ * Implements hook_views_api().
+ */
+function tsitaatcom_features_views_api() {
+  return array("api" => "3.0");
+}
+
+/**
  * Implements hook_node_info().
  */
 function tsitaatcom_features_node_info() {
@@ -14,7 +21,7 @@ function tsitaatcom_features_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Pealkiri'),
       'help' => '',
     ),
     'quote' => array(

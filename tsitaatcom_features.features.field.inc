@@ -516,11 +516,11 @@ function tsitaatcom_features_field_default_fields() {
       'entity_types' => array(),
       'field_name' => 'field_created_by',
       'foreign keys' => array(
-        'node' => array(
+        'users' => array(
           'columns' => array(
-            'target_id' => 'nid',
+            'target_id' => 'uid',
           ),
-          'table' => 'node',
+          'table' => 'users',
         ),
       ),
       'indexes' => array(
@@ -4162,7 +4162,7 @@ function tsitaatcom_features_field_default_fields() {
       'bundle' => 'quote_author',
       'default_value' => NULL,
       'deleted' => '0',
-      'description' => '',
+      'description' => 'Old field.',
       'display' => array(
         'default' => array(
           'label' => 'above',
