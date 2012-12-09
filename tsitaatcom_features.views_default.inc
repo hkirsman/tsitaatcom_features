@@ -47,6 +47,17 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['relationships']['uid']['field'] = 'uid';
   $handler->display->display_options['relationships']['uid']['ui_name'] = 'Content author';
   $handler->display->display_options['relationships']['uid']['required'] = TRUE;
+  /* Relationship: Sisu: Taxonomy terms on node */
+  $handler->display->display_options['relationships']['term_node_tid']['id'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['table'] = 'node';
+  $handler->display->display_options['relationships']['term_node_tid']['field'] = 'term_node_tid';
+  $handler->display->display_options['relationships']['term_node_tid']['label'] = 'Tag taxonomy relationship';
+  $handler->display->display_options['relationships']['term_node_tid']['required'] = TRUE;
+  $handler->display->display_options['relationships']['term_node_tid']['vocabularies'] = array(
+    'quote_tag' => 'quote_tag',
+    'forums' => 0,
+    'quote_category' => 0,
+  );
   /* Väli: Sisu: Urlfriendly author name */
   $handler->display->display_options['fields']['field_urlfriendly_author_name']['id'] = 'field_urlfriendly_author_name';
   $handler->display->display_options['fields']['field_urlfriendly_author_name']['table'] = 'field_data_field_urlfriendly_author_name';
@@ -128,6 +139,18 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['fields']['field_source_year_start_circa']['table'] = 'field_data_field_source_year_start_circa';
   $handler->display->display_options['fields']['field_source_year_start_circa']['field'] = 'field_source_year_start_circa';
   $handler->display->display_options['fields']['field_source_year_start_circa']['exclude'] = TRUE;
+  /* Väli: Sisu: Tag */
+  $handler->display->display_options['fields']['field_tag']['id'] = 'field_tag';
+  $handler->display->display_options['fields']['field_tag']['table'] = 'field_data_field_tag';
+  $handler->display->display_options['fields']['field_tag']['field'] = 'field_tag';
+  $handler->display->display_options['fields']['field_tag']['label'] = '';
+  $handler->display->display_options['fields']['field_tag']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_tag']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_tag']['alter']['path'] = 'tsitaadid/teemad/[field_tag]';
+  $handler->display->display_options['fields']['field_tag']['alter']['replace_spaces_with_underscore'] = TRUE;
+  $handler->display->display_options['fields']['field_tag']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tag']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_tag']['delta_offset'] = '0';
   /* Väli: Rewrite all fields here */
   $handler->display->display_options['fields']['title']['id'] = 'title';
   $handler->display->display_options['fields']['title']['table'] = 'node';
@@ -136,14 +159,14 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['fields']['title']['label'] = '';
   $handler->display->display_options['fields']['title']['alter']['alter_text'] = TRUE;
   $handler->display->display_options['fields']['title']['alter']['text'] = '<div class="clearfix">
-<div class="col1">
-[title_1]
-[field_author_profession]
-[field_quote]
-</div>
-<div class="col2">
-  [field_tag]
-</div>
+  <div class="col1">
+    <div class="field_title">[title_1]</div>
+    <div class="field_author_profession">[field_author_profession]</div>
+    <div class="field_quote">[field_quote]</div>
+  </div>
+  <div class="col2">
+    <div class="field_tag">Märksõnad: [field_tag]</div>
+  </div>
 </div>';
   $handler->display->display_options['fields']['title']['element_label_colon'] = FALSE;
   /* Sort criterion: Sisu: Created time (field_created_time) */
@@ -173,6 +196,7 @@ function tsitaatcom_features_views_default_views() {
 
   /* Display: Autori järgi */
   $handler = $view->new_display('page', 'Autori järgi', 'page_2');
+  $handler->display->display_options['enabled'] = FALSE;
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Sisu: Urlfriendly author name (field_urlfriendly_author_name) */
@@ -188,6 +212,40 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['limit'] = '0';
   $handler->display->display_options['path'] = 'tsitaadid/autorid/%';
+
+  /* Display: Autori järgi */
+  $handler = $view->new_display('block', 'Autori järgi', 'block_1');
+  $handler->display->display_options['display_description'] = 'Kutsutakse tsitaatcom moodulist.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Sisu: Urlfriendly author name (field_urlfriendly_author_name) */
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['id'] = 'field_urlfriendly_author_name_value';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['table'] = 'field_data_field_urlfriendly_author_name';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['field'] = 'field_urlfriendly_author_name_value';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['relationship'] = 'field_author_target_id_1';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['exception']['title'] = 'Kõik';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['limit'] = '0';
+
+  /* Display: Märksõna järgi */
+  $handler = $view->new_display('page', 'Märksõna järgi', 'page_3');
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['arguments'] = FALSE;
+  /* Contextual filter: Taksonoomia termin: Nimi */
+  $handler->display->display_options['arguments']['name']['id'] = 'name';
+  $handler->display->display_options['arguments']['name']['table'] = 'taxonomy_term_data';
+  $handler->display->display_options['arguments']['name']['field'] = 'name';
+  $handler->display->display_options['arguments']['name']['relationship'] = 'term_node_tid';
+  $handler->display->display_options['arguments']['name']['exception']['title'] = 'Kõik';
+  $handler->display->display_options['arguments']['name']['default_argument_type'] = 'fixed';
+  $handler->display->display_options['arguments']['name']['summary']['number_of_records'] = '0';
+  $handler->display->display_options['arguments']['name']['summary']['format'] = 'default_summary';
+  $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
+  $handler->display->display_options['arguments']['name']['limit'] = '0';
+  $handler->display->display_options['path'] = 'tsitaadid/teemad/%';
   $translatables['quote'] = array(
     t('Master'),
     t('more'),
@@ -205,6 +263,7 @@ function tsitaatcom_features_views_default_views() {
     t('viimane »'),
     t('Sisu entity referenced from field_author'),
     t('author'),
+    t('Tag taxonomy relationship'),
     t('Kategooria'),
     t('Lisas'),
     t('Source title'),
@@ -214,18 +273,20 @@ function tsitaatcom_features_views_default_views() {
     t('Source year start'),
     t('Source year start circa'),
     t('<div class="clearfix">
-<div class="col1">
-[title_1]
-[field_author_profession]
-[field_quote]
-</div>
-<div class="col2">
-  [field_tag]
-</div>
+  <div class="col1">
+    <div class="field_title">[title_1]</div>
+    <div class="field_author_profession">[field_author_profession]</div>
+    <div class="field_quote">[field_quote]</div>
+  </div>
+  <div class="col2">
+    <div class="field_tag">Märksõnad: [field_tag]</div>
+  </div>
 </div>'),
     t('Lehekülg'),
     t('Autori järgi'),
     t('Kõik'),
+    t('Kutsutakse tsitaatcom moodulist.'),
+    t('Märksõna järgi'),
   );
   $export['quote'] = $view;
 
