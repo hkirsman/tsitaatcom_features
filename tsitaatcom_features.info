@@ -96,5 +96,7 @@ features[node][] = quote_source
 features[taxonomy][] = quote_category
 features[taxonomy][] = quote_tag
 features[user_permission][] = access overlay
+features[user_permission][] = delete own quote content
+features[user_permission][] = edit own quote content
 features[views_view][] = quote
 features_exclude[dependencies][ctools] = ctools
