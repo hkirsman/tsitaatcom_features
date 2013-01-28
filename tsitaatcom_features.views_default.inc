@@ -235,6 +235,23 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['arguments']['name']['summary_options']['items_per_page'] = '25';
   $handler->display->display_options['arguments']['name']['limit'] = '0';
   $handler->display->display_options['path'] = 'tsitaadid/teemad/%';
+
+  /* Display: Top 100 page */
+  $handler = $view->new_display('page', 'Top 100 page', 'page_2');
+  $handler->display->display_options['display_description'] = 'List highest rated 100 quotes.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Sisu: Rank (field_rank) */
+  $handler->display->display_options['sorts']['field_rank_value']['id'] = 'field_rank_value';
+  $handler->display->display_options['sorts']['field_rank_value']['table'] = 'field_data_field_rank';
+  $handler->display->display_options['sorts']['field_rank_value']['field'] = 'field_rank_value';
+  $handler->display->display_options['sorts']['field_rank_value']['order'] = 'DESC';
+  $handler->display->display_options['path'] = 'tsitaadid/top-100-tsitaadid';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Top 100';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
   $translatables['quote'] = array(
     t('Master'),
     t('more'),
@@ -279,6 +296,8 @@ function tsitaatcom_features_views_default_views() {
     t('Called programmatically from tsitaatcom module.'),
     t('Kõik'),
     t('Quotes by tags page'),
+    t('Top 100 page'),
+    t('List highest rated 100 quotes.'),
   );
   $export['quote'] = $view;
 
