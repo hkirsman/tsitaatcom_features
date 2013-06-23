@@ -10,82 +10,77 @@
 function tsitaatcom_features_field_default_fields() {
   $fields = array();
 
-  // Exported field: 'node-portrait-field_portrait'.
-  $fields['node-portrait-field_portrait'] = array(
+  // Exported field: 'node-photo-body'.
+  $fields['node-photo-body'] = array(
     'field_config' => array(
       'active' => '1',
       'cardinality' => '1',
       'deleted' => '0',
-      'entity_types' => array(),
-      'field_name' => 'field_portrait',
+      'entity_types' => array(
+        0 => 'node',
+      ),
+      'field_name' => 'body',
       'foreign keys' => array(
-        'fid' => array(
+        'format' => array(
           'columns' => array(
-            'fid' => 'fid',
+            'format' => 'format',
           ),
-          'table' => 'file_managed',
+          'table' => 'filter_format',
         ),
       ),
       'indexes' => array(
-        'fid' => array(
-          0 => 'fid',
+        'format' => array(
+          0 => 'format',
         ),
       ),
       'locked' => '0',
-      'module' => 'image',
+      'module' => 'text',
       'settings' => array(
-        'default_image' => 0,
-        'uri_scheme' => 'public',
+        'entity_translation_sync' => FALSE,
       ),
       'translatable' => '0',
-      'type' => 'image',
+      'type' => 'text_with_summary',
     ),
     'field_instance' => array(
-      'bundle' => 'portrait',
+      'bundle' => 'photo',
+      'default_value' => NULL,
       'deleted' => '0',
       'description' => '',
       'display' => array(
         'default' => array(
-          'label' => 'above',
-          'module' => 'image',
-          'settings' => array(
-            'image_link' => '',
-            'image_style' => '',
-          ),
-          'type' => 'image',
-          'weight' => 1,
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(),
+          'type' => 'text_default',
+          'weight' => 0,
         ),
         'teaser' => array(
-          'label' => 'above',
-          'settings' => array(),
-          'type' => 'hidden',
+          'label' => 'hidden',
+          'module' => 'text',
+          'settings' => array(
+            'trim_length' => 600,
+          ),
+          'type' => 'text_summary_or_trimmed',
           'weight' => 0,
         ),
       ),
       'entity_type' => 'node',
-      'field_name' => 'field_portrait',
-      'label' => 'Portrait',
-      'required' => 0,
+      'field_name' => 'body',
+      'label' => 'Body',
+      'required' => FALSE,
       'settings' => array(
-        'alt_field' => 1,
-        'default_image' => 0,
-        'file_directory' => '',
-        'file_extensions' => 'png gif jpg jpeg',
-        'max_filesize' => '',
-        'max_resolution' => '',
-        'min_resolution' => '',
-        'title_field' => 1,
+        'display_summary' => TRUE,
+        'text_processing' => 1,
         'user_register_form' => FALSE,
       ),
       'widget' => array(
-        'active' => 1,
-        'module' => 'image',
+        'module' => 'text',
         'settings' => array(
-          'preview_image_style' => 'thumbnail',
-          'progress_indicator' => 'throbber',
+          'rows' => 20,
+          'summary_rows' => 5,
         ),
-        'type' => 'image_image',
-        'weight' => '-2',
+        'type' => 'text_textarea_with_summary',
+        'weight' => 31,
       ),
     ),
   );
@@ -4934,7 +4929,6 @@ function tsitaatcom_features_field_default_fields() {
   t('Name freeform et');
   t('Nationality');
   t('Old field.');
-  t('Portrait');
   t('Profession');
   t('Profession de');
   t('Profession en');

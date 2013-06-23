@@ -59,6 +59,11 @@ function tsitaatcom_features_views_default_views() {
     'forums' => 0,
     'quote_category' => 0,
   );
+  /* Relationship: Entity Reference: Referenced Entity */
+  $handler->display->display_options['relationships']['field_author_portrait_ref_target_id']['id'] = 'field_author_portrait_ref_target_id';
+  $handler->display->display_options['relationships']['field_author_portrait_ref_target_id']['table'] = 'field_data_field_author_portrait_ref';
+  $handler->display->display_options['relationships']['field_author_portrait_ref_target_id']['field'] = 'field_author_portrait_ref_target_id';
+  $handler->display->display_options['relationships']['field_author_portrait_ref_target_id']['relationship'] = 'field_author_target_id_1';
   /* Väli: Sisu: Urlfriendly author name */
   $handler->display->display_options['fields']['field_urlfriendly_author_name']['id'] = 'field_urlfriendly_author_name';
   $handler->display->display_options['fields']['field_urlfriendly_author_name']['table'] = 'field_data_field_urlfriendly_author_name';
@@ -87,6 +92,22 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['fields']['field_author_profession']['label'] = '';
   $handler->display->display_options['fields']['field_author_profession']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_author_profession']['element_label_colon'] = FALSE;
+  /* Väli: Sisu: Quote author portrait */
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['id'] = 'field_quote_author_portrait_1';
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['table'] = 'field_data_field_quote_author_portrait';
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['field'] = 'field_quote_author_portrait';
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['relationship'] = 'field_author_portrait_ref_target_id';
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['label'] = '';
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['alter']['path'] = 'tsitaadid/autorid/[field_urlfriendly_author_name]';
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['click_sort_column'] = 'fid';
+  $handler->display->display_options['fields']['field_quote_author_portrait_1']['settings'] = array(
+    'image_style' => 'tsitaatcom_quote_author_thumbnail',
+    'image_link' => '',
+  );
   /* Väli: Sisu: Quote */
   $handler->display->display_options['fields']['field_quote']['id'] = 'field_quote';
   $handler->display->display_options['fields']['field_quote']['table'] = 'field_data_field_quote';
@@ -171,6 +192,7 @@ function tsitaatcom_features_views_default_views() {
     <div class="field_quote">[field_quote]</div>
   </div>
   <div class="col2">
+    <div class="field_portrait">[field_quote_author_portrait_1]</div>
     <div class="field_tag">Märksõnad: [field_tag]</div>
     [edit_node]
   </div>
@@ -197,13 +219,13 @@ function tsitaatcom_features_views_default_views() {
   );
 
   /* Display: Front page */
-  $handler = $view->new_display('page', 'Front page', 'page_1');
+  $handler = $view->new_display('page', 'Front page', 'front_page');
   $handler->display->display_options['display_description'] = 'Latest quotations on frontpage.';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['path'] = 'avaleht';
 
   /* Display: Quotes by author block */
-  $handler = $view->new_display('block', 'Quotes by author block', 'block_1');
+  $handler = $view->new_display('block', 'Quotes by author block', 'quotes_by_author_block');
   $handler->display->display_options['display_description'] = 'Called programmatically from tsitaatcom module.';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
@@ -220,7 +242,7 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['limit'] = '0';
 
   /* Display: Quotes by tags page */
-  $handler = $view->new_display('page', 'Quotes by tags page', 'page_3');
+  $handler = $view->new_display('page', 'Quotes by tags page', 'quotes_by_tags_page');
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Taksonoomia termin: Nimi */
@@ -237,7 +259,7 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['path'] = 'tsitaadid/teemad/%';
 
   /* Display: Top 100 page */
-  $handler = $view->new_display('page', 'Top 100 page', 'page_2');
+  $handler = $view->new_display('page', 'Top 100 page', 'top_100_page');
   $handler->display->display_options['display_description'] = 'List highest rated 100 quotes.';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
   $handler->display->display_options['defaults']['sorts'] = FALSE;
@@ -270,6 +292,7 @@ function tsitaatcom_features_views_default_views() {
     t('Sisu entity referenced from field_author'),
     t('author'),
     t('Tag taxonomy relationship'),
+    t('Sisu entity referenced from field_author_portrait_ref'),
     t('Kategooria'),
     t('Lisas'),
     t('Source title'),
@@ -286,6 +309,7 @@ function tsitaatcom_features_views_default_views() {
     <div class="field_quote">[field_quote]</div>
   </div>
   <div class="col2">
+    <div class="field_portrait">[field_quote_author_portrait_1]</div>
     <div class="field_tag">Märksõnad: [field_tag]</div>
     [edit_node]
   </div>
