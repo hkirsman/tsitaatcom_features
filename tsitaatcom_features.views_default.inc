@@ -29,11 +29,8 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['query']['options']['distinct'] = TRUE;
   $handler->display->display_options['exposed_form']['type'] = 'basic';
   $handler->display->display_options['exposed_form']['options']['reset_button_label'] = 'Lähtesta';
-  $handler->display->display_options['pager']['type'] = 'full';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« esimene';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ eelmine';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'järgmine ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'viimane »';
+  $handler->display->display_options['pager']['type'] = 'none';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['style_plugin'] = 'default';
   $handler->display->display_options['row_plugin'] = 'fields';
   /* Relationship: Quote author */
@@ -222,6 +219,16 @@ function tsitaatcom_features_views_default_views() {
   $handler = $view->new_display('page', 'Front page', 'front_page');
   $handler->display->display_options['display_description'] = 'Latest quotations on frontpage.';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '17';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« esimene';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ eelmine';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'järgmine ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'viimane »';
   $handler->display->display_options['path'] = 'avaleht';
 
   /* Display: Quotes by author block */
@@ -282,13 +289,6 @@ function tsitaatcom_features_views_default_views() {
     t('Sort by'),
     t('Asc'),
     t('Desc'),
-    t('Items per page'),
-    t('- All -'),
-    t('Offset'),
-    t('« esimene'),
-    t('‹ eelmine'),
-    t('järgmine ›'),
-    t('viimane »'),
     t('Sisu entity referenced from field_author'),
     t('author'),
     t('Tag taxonomy relationship'),
@@ -316,6 +316,13 @@ function tsitaatcom_features_views_default_views() {
 </div>'),
     t('Front page'),
     t('Latest quotations on frontpage.'),
+    t('Items per page'),
+    t('- All -'),
+    t('Offset'),
+    t('« esimene'),
+    t('‹ eelmine'),
+    t('järgmine ›'),
+    t('viimane »'),
     t('Quotes by author block'),
     t('Called programmatically from tsitaatcom module.'),
     t('Kõik'),
