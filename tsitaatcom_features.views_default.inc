@@ -235,6 +235,12 @@ function tsitaatcom_features_views_default_views() {
   $handler = $view->new_display('block', 'Quotes by author block', 'quotes_by_author_block');
   $handler->display->display_options['display_description'] = 'Called programmatically from tsitaatcom module.';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Sisu: Rank (field_rank) */
+  $handler->display->display_options['sorts']['field_rank_value']['id'] = 'field_rank_value';
+  $handler->display->display_options['sorts']['field_rank_value']['table'] = 'field_data_field_rank';
+  $handler->display->display_options['sorts']['field_rank_value']['field'] = 'field_rank_value';
+  $handler->display->display_options['sorts']['field_rank_value']['order'] = 'DESC';
   $handler->display->display_options['defaults']['arguments'] = FALSE;
   /* Contextual filter: Sisu: Urlfriendly author name (field_urlfriendly_author_name) */
   $handler->display->display_options['arguments']['field_urlfriendly_author_name_value']['id'] = 'field_urlfriendly_author_name_value';
@@ -269,6 +275,10 @@ function tsitaatcom_features_views_default_views() {
   $handler = $view->new_display('page', 'Top 100 page', 'top_100_page');
   $handler->display->display_options['display_description'] = 'List highest rated 100 quotes.';
   $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '80';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
   $handler->display->display_options['defaults']['sorts'] = FALSE;
   /* Sort criterion: Sisu: Rank (field_rank) */
   $handler->display->display_options['sorts']['field_rank_value']['id'] = 'field_rank_value';
@@ -278,6 +288,121 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['path'] = 'tsitaadid/top-100-tsitaadid';
   $handler->display->display_options['menu']['type'] = 'normal';
   $handler->display->display_options['menu']['title'] = 'Top 100';
+  $handler->display->display_options['menu']['weight'] = '0';
+  $handler->display->display_options['menu']['name'] = 'main-menu';
+  $handler->display->display_options['menu']['context'] = 0;
+
+  /* Display: Test */
+  $handler = $view->new_display('page', 'Test', 'page_1');
+  $handler->display->display_options['display_description'] = 'Latest quotations on frontpage.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['query'] = FALSE;
+  $handler->display->display_options['query']['type'] = 'views_query';
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'lite';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '17';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« esimene';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ eelmine';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'järgmine ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'viimane »';
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Sisu: Autor */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['defaults']['fields'] = FALSE;
+  /* Väli: Sisu: Urlfriendly author name */
+  $handler->display->display_options['fields']['field_urlfriendly_author_name']['id'] = 'field_urlfriendly_author_name';
+  $handler->display->display_options['fields']['field_urlfriendly_author_name']['table'] = 'field_data_field_urlfriendly_author_name';
+  $handler->display->display_options['fields']['field_urlfriendly_author_name']['field'] = 'field_urlfriendly_author_name';
+  $handler->display->display_options['fields']['field_urlfriendly_author_name']['relationship'] = 'field_author_target_id_1';
+  $handler->display->display_options['fields']['field_urlfriendly_author_name']['label'] = '';
+  $handler->display->display_options['fields']['field_urlfriendly_author_name']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_urlfriendly_author_name']['element_label_colon'] = FALSE;
+  /* Väli: Sisu: Pealkiri */
+  $handler->display->display_options['fields']['title_1']['id'] = 'title_1';
+  $handler->display->display_options['fields']['title_1']['table'] = 'node';
+  $handler->display->display_options['fields']['title_1']['field'] = 'title';
+  $handler->display->display_options['fields']['title_1']['label'] = '';
+  $handler->display->display_options['fields']['title_1']['alter']['alter_text'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['title_1']['alter']['path'] = 'tsitaadid/autorid/[field_urlfriendly_author_name]';
+  $handler->display->display_options['fields']['title_1']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['title_1']['link_to_node'] = FALSE;
+  /* Väli: Sisu: Tag */
+  $handler->display->display_options['fields']['field_tag']['id'] = 'field_tag';
+  $handler->display->display_options['fields']['field_tag']['table'] = 'field_data_field_tag';
+  $handler->display->display_options['fields']['field_tag']['field'] = 'field_tag';
+  $handler->display->display_options['fields']['field_tag']['label'] = '';
+  $handler->display->display_options['fields']['field_tag']['exclude'] = TRUE;
+  $handler->display->display_options['fields']['field_tag']['alter']['make_link'] = TRUE;
+  $handler->display->display_options['fields']['field_tag']['alter']['path'] = 'tsitaadid/teemad/[field_tag]';
+  $handler->display->display_options['fields']['field_tag']['alter']['replace_spaces_with_underscore'] = TRUE;
+  $handler->display->display_options['fields']['field_tag']['element_label_colon'] = FALSE;
+  $handler->display->display_options['fields']['field_tag']['type'] = 'taxonomy_term_reference_plain';
+  $handler->display->display_options['fields']['field_tag']['delta_offset'] = '0';
+  $handler->display->display_options['path'] = 'test';
+
+  /* Display: Front page display suit */
+  $handler = $view->new_display('page', 'Front page display suit', 'page_2');
+  $handler->display->display_options['display_description'] = 'Latest quotations on frontpage.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'full';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '17';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['pager']['options']['id'] = '0';
+  $handler->display->display_options['pager']['options']['quantity'] = '9';
+  $handler->display->display_options['pager']['options']['tags']['first'] = '« esimene';
+  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ eelmine';
+  $handler->display->display_options['pager']['options']['tags']['next'] = 'järgmine ›';
+  $handler->display->display_options['pager']['options']['tags']['last'] = 'viimane »';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Sisu: Autor */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['path'] = 'avaleht_ds';
+
+  /* Display: Top 100 page display suite */
+  $handler = $view->new_display('page', 'Top 100 page display suite', 'page_3');
+  $handler->display->display_options['display_description'] = 'List highest rated 100 quotes.';
+  $handler->display->display_options['defaults']['hide_admin_links'] = FALSE;
+  $handler->display->display_options['defaults']['pager'] = FALSE;
+  $handler->display->display_options['pager']['type'] = 'some';
+  $handler->display->display_options['pager']['options']['items_per_page'] = '80';
+  $handler->display->display_options['pager']['options']['offset'] = '0';
+  $handler->display->display_options['defaults']['style_plugin'] = FALSE;
+  $handler->display->display_options['style_plugin'] = 'default';
+  $handler->display->display_options['defaults']['style_options'] = FALSE;
+  $handler->display->display_options['defaults']['row_plugin'] = FALSE;
+  $handler->display->display_options['row_plugin'] = 'entity';
+  $handler->display->display_options['row_options']['view_mode'] = 'teaser';
+  $handler->display->display_options['defaults']['row_options'] = FALSE;
+  $handler->display->display_options['defaults']['relationships'] = FALSE;
+  /* Relationship: Sisu: Autor */
+  $handler->display->display_options['relationships']['uid']['id'] = 'uid';
+  $handler->display->display_options['relationships']['uid']['table'] = 'node';
+  $handler->display->display_options['relationships']['uid']['field'] = 'uid';
+  $handler->display->display_options['defaults']['sorts'] = FALSE;
+  /* Sort criterion: Sisu: Rank (field_rank) */
+  $handler->display->display_options['sorts']['field_rank_value']['id'] = 'field_rank_value';
+  $handler->display->display_options['sorts']['field_rank_value']['table'] = 'field_data_field_rank';
+  $handler->display->display_options['sorts']['field_rank_value']['field'] = 'field_rank_value';
+  $handler->display->display_options['sorts']['field_rank_value']['order'] = 'DESC';
+  $handler->display->display_options['path'] = 'tsitaadid/top-100-tsitaadid-ds';
+  $handler->display->display_options['menu']['type'] = 'normal';
+  $handler->display->display_options['menu']['title'] = 'Top 100 ds';
   $handler->display->display_options['menu']['weight'] = '0';
   $handler->display->display_options['menu']['name'] = 'main-menu';
   $handler->display->display_options['menu']['context'] = 0;
@@ -329,6 +454,9 @@ function tsitaatcom_features_views_default_views() {
     t('Quotes by tags page'),
     t('Top 100 page'),
     t('List highest rated 100 quotes.'),
+    t('Test'),
+    t('Front page display suit'),
+    t('Top 100 page display suite'),
   );
   $export['quote'] = $view;
 

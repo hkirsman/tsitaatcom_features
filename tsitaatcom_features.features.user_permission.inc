@@ -10,15 +10,6 @@
 function tsitaatcom_features_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: access overlay.
-  $permissions['access overlay'] = array(
-    'name' => 'access overlay',
-    'roles' => array(
-      'authenticated user' => 'authenticated user',
-    ),
-    'module' => 'overlay',
-  );
-
   // Exported permission: delete own quote content.
   $permissions['delete own quote content'] = array(
     'name' => 'delete own quote content',
