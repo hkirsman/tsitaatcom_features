@@ -89,7 +89,7 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['fields']['field_author_profession']['label'] = '';
   $handler->display->display_options['fields']['field_author_profession']['exclude'] = TRUE;
   $handler->display->display_options['fields']['field_author_profession']['element_label_colon'] = FALSE;
-  /* Väli: Sisu: Quote author portrait */
+  /* Väli: : field_quote_author_portrait */
   $handler->display->display_options['fields']['field_quote_author_portrait_1']['id'] = 'field_quote_author_portrait_1';
   $handler->display->display_options['fields']['field_quote_author_portrait_1']['table'] = 'field_data_field_quote_author_portrait';
   $handler->display->display_options['fields']['field_quote_author_portrait_1']['field'] = 'field_quote_author_portrait';

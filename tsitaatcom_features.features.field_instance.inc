@@ -49,7 +49,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 26,
+      'weight' => 27,
     ),
   );
 
@@ -64,20 +64,18 @@ function tsitaatcom_features_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => 1,
-          'view_mode' => 'teaser',
+          'link' => FALSE,
         ),
-        'type' => 'entityreference_entity_view',
+        'type' => 'entityreference_label',
         'weight' => 42,
       ),
       'teaser' => array(
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => 1,
-          'view_mode' => 'teaser',
+          'link' => 1,
         ),
-        'type' => 'entityreference_entity_view',
+        'type' => 'entityreference_label',
         'weight' => 0,
       ),
     ),
@@ -97,7 +95,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete_tags',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -143,7 +141,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 13,
+      'weight' => 14,
     ),
   );
 
@@ -189,7 +187,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -288,10 +286,9 @@ function tsitaatcom_features_field_default_field_instances() {
         'label' => 'above',
         'module' => 'entityreference',
         'settings' => array(
-          'links' => 1,
-          'view_mode' => 'full',
+          'link' => FALSE,
         ),
-        'type' => 'entityreference_entity_view',
+        'type' => 'entityreference_label',
         'weight' => 41,
       ),
       'teaser' => array(
@@ -317,7 +314,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 22,
+      'weight' => 23,
     ),
   );
 
@@ -363,7 +360,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 23,
+      'weight' => 24,
     ),
   );
 
@@ -403,7 +400,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 24,
+      'weight' => 25,
     ),
   );
 
@@ -613,7 +610,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'entity_type' => 'node',
     'field_name' => 'field_rank',
     'label' => 'Rank',
-    'required' => 0,
+    'required' => 1,
     'settings' => array(
       'max' => '',
       'min' => '',
@@ -672,7 +669,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 25,
+      'weight' => 26,
     ),
   );
 
@@ -715,7 +712,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 14,
+      'weight' => 15,
     ),
   );
 
@@ -761,7 +758,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 15,
+      'weight' => 16,
     ),
   );
 
@@ -801,7 +798,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 16,
+      'weight' => 17,
     ),
   );
 
@@ -841,7 +838,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 18,
+      'weight' => 19,
     ),
   );
 
@@ -881,7 +878,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 17,
+      'weight' => 18,
     ),
   );
 
@@ -921,7 +918,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 21,
+      'weight' => 22,
     ),
   );
 
@@ -961,7 +958,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => 20,
     ),
   );
 
@@ -1001,7 +998,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => 21,
     ),
   );
 
@@ -1021,9 +1018,8 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'above',
-        'module' => 'taxonomy',
         'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
@@ -1044,6 +1040,46 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
       'type' => 'taxonomy_autocomplete',
       'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_tag_auto'
+  $field_instances['node-quote-field_tag_auto'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'On quote save, we\'ll populate all the tags to this field as string. This is for easier database query.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 49,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_tag_auto',
+    'label' => 'Tag auto',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
     ),
   );
 
@@ -1083,7 +1119,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -1166,7 +1202,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 38,
+      'weight' => 39,
     ),
   );
 
@@ -2117,18 +2153,14 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
       'teaser' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'links' => 1,
-          'view_mode' => 'teaser',
-        ),
-        'type' => 'entityreference_entity_view',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
     'field_name' => 'field_author_portrait_ref',
-    'label' => 'Author portrait',
+    'label' => 'Author Portrait Ref',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -2138,7 +2170,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 39,
+      'weight' => 38,
     ),
   );
 
@@ -2711,48 +2743,8 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-quote_author_portrait-field_author_portrait_source'
-  $field_instances['node-quote_author_portrait-field_author_portrait_source'] = array(
-    'bundle' => 'quote_author_portrait',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Mostly urls. But it could be a scan from a magazine so description (name, date eg) would be needed.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 5,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_author_portrait_source',
-    'label' => 'Author portrait source',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 37,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote_author_portrait-field_quote_author_portrait'
-  $field_instances['node-quote_author_portrait-field_quote_author_portrait'] = array(
+  // Exported field_instance: 'node-quote_author_portrait-field_author_portrait'
+  $field_instances['node-quote_author_portrait-field_author_portrait'] = array(
     'bundle' => 'quote_author_portrait',
     'deleted' => 0,
     'description' => '',
@@ -2765,43 +2757,39 @@ function tsitaatcom_features_field_default_field_instances() {
           'image_style' => '',
         ),
         'type' => 'image',
-        'weight' => 3,
+        'weight' => 0,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'image',
-        'settings' => array(
-          'image_link' => '',
-          'image_style' => 'tsitaatcom_quote_author_thumbnail',
-        ),
-        'type' => 'image',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_quote_author_portrait',
-    'label' => 'Quote author portrait',
-    'required' => 1,
+    'field_name' => 'field_author_portrait',
+    'label' => 'Author Portrait',
+    'required' => 0,
     'settings' => array(
-      'alt_field' => 1,
+      'alt_field' => 0,
       'default_image' => 0,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
       'max_resolution' => '',
-      'min_resolution' => '90x90',
-      'title_field' => 1,
+      'min_resolution' => '',
+      'title_field' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
       'active' => 1,
       'module' => 'image',
       'settings' => array(
-        'preview_image_style' => 'tsitaatcom_quote_author_thumbnail',
+        'preview_image_style' => 'thumbnail',
         'progress_indicator' => 'throbber',
       ),
       'type' => 'image_image',
-      'weight' => 35,
+      'weight' => -4,
     ),
   );
 
@@ -3007,9 +2995,9 @@ function tsitaatcom_features_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Active');
   t('Author');
+  t('Author Portrait');
+  t('Author Portrait Ref');
   t('Author id');
-  t('Author portrait');
-  t('Author portrait source');
   t('Author2 id');
   t('Body');
   t('Born');
@@ -3037,7 +3025,6 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Midname de');
   t('Midname en');
   t('Midname et');
-  t('Mostly urls. But it could be a scan from a magazine so description (name, date eg) would be needed.');
   t('Name amazon');
   t('Name en');
   t('Name et');
@@ -3047,12 +3034,12 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Name freeform et');
   t('Nationality');
   t('Old field.');
+  t('On quote save, we\'ll populate all the tags to this field as string. This is for easier database query.');
   t('Profession');
   t('Profession de');
   t('Profession en');
   t('Profession et');
   t('Quote');
-  t('Quote author portrait');
   t('Quote id');
   t('Rank');
   t('Revision');
@@ -3066,6 +3053,7 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Source year start');
   t('Source year start circa');
   t('Tag');
+  t('Tag auto');
   t('Tag old');
   t('Urlfriendly author name');
   t('Urlfriendly author name de');
