@@ -299,15 +299,6 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['defaults']['query'] = FALSE;
   $handler->display->display_options['query']['type'] = 'views_query';
   $handler->display->display_options['defaults']['pager'] = FALSE;
-  $handler->display->display_options['pager']['type'] = 'lite';
-  $handler->display->display_options['pager']['options']['items_per_page'] = '17';
-  $handler->display->display_options['pager']['options']['offset'] = '0';
-  $handler->display->display_options['pager']['options']['id'] = '0';
-  $handler->display->display_options['pager']['options']['quantity'] = '9';
-  $handler->display->display_options['pager']['options']['tags']['first'] = '« esimene';
-  $handler->display->display_options['pager']['options']['tags']['previous'] = '‹ eelmine';
-  $handler->display->display_options['pager']['options']['tags']['next'] = 'järgmine ›';
-  $handler->display->display_options['pager']['options']['tags']['last'] = 'viimane »';
   $handler->display->display_options['defaults']['relationships'] = FALSE;
   /* Relationship: Sisu: Autor */
   $handler->display->display_options['relationships']['uid']['id'] = 'uid';

@@ -4,6 +4,7 @@ package = Tsitaat.com
 php = 5.2.4
 version = 7.x-2.0
 project = tsitaatcom_features
+dependencies[] = comment
 dependencies[] = entityreference
 dependencies[] = features
 dependencies[] = image
