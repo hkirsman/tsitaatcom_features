@@ -23,7 +23,7 @@ function tsitaatcom_features_image_default_styles() {
     'label' => 'tsitaatcom_author_thumbnail',
     'effects' => array(
       1 => array(
-        'label' => 'Skaleerimine',
+        'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
         'dimensions callback' => 'image_scale_dimensions',
