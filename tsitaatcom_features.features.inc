@@ -84,7 +84,7 @@ function tsitaatcom_features_node_info() {
     'quote_source' => array(
       'name' => t('Quote Source'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Source of a quote e.g. article or a movie. All the fields are prefixed as qs.'),
       'has_title' => '1',
       'title_label' => t('Pealkiri'),
       'help' => '',

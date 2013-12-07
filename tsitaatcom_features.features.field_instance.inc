@@ -2850,48 +2850,1393 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-quote_source-body'
-  $field_instances['node-quote_source-body'] = array(
+  // Exported field_instance: 'node-quote_source-field_qs_amazon_product_link_de'
+  $field_instances['node-quote_source-field_qs_amazon_product_link_de'] = array(
     'bundle' => 'quote_source',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Old field.',
     'display' => array(
       'default' => array(
-        'label' => 'hidden',
+        'label' => 'above',
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 0,
+        'weight' => 34,
       ),
       'teaser' => array(
-        'label' => 'hidden',
-        'module' => 'text',
-        'settings' => array(
-          'trim_length' => 600,
-        ),
-        'type' => 'text_summary_or_trimmed',
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'body',
-    'label' => 'Body',
-    'required' => FALSE,
+    'field_name' => 'field_qs_amazon_product_link_de',
+    'label' => 'Quote Source amazon product link de',
+    'required' => 0,
     'settings' => array(
-      'display_summary' => TRUE,
-      'entity_translation_sync' => FALSE,
-      'text_processing' => 1,
+      'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
+      'active' => 1,
       'module' => 'text',
       'settings' => array(
-        'rows' => 20,
-        'summary_rows' => 5,
+        'size' => 60,
       ),
-      'type' => 'text_textarea_with_summary',
-      'weight' => -4,
+      'type' => 'text_textfield',
+      'weight' => 33,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_amazon_product_link_en'
+  $field_instances['node-quote_source-field_qs_amazon_product_link_en'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 32,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_amazon_product_link_en',
+    'label' => 'Quote Source amazon product link en',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 31,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_amazon_product_link_et'
+  $field_instances['node-quote_source-field_qs_amazon_product_link_et'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 30,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_amazon_product_link_et',
+    'label' => 'Quote Source amazon product link et',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 29,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_id'
+  $field_instances['node-quote_source-field_qs_id'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 1,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_id',
+    'label' => 'Quote Source id',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 1,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_isbn_de'
+  $field_instances['node-quote_source-field_qs_isbn_de'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 35,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_isbn_de',
+    'label' => 'Quote Source isbn de',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 34,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_isbn_en'
+  $field_instances['node-quote_source-field_qs_isbn_en'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 33,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_isbn_en',
+    'label' => 'Quote Source isbn en',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 32,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_isbn_et'
+  $field_instances['node-quote_source-field_qs_isbn_et'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 31,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_isbn_et',
+    'label' => 'Quote Source isbn et',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 30,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_cs'
+  $field_instances['node-quote_source-field_qs_name_cs'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 8,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_cs',
+    'label' => 'Quote Source name cs',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 8,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_de'
+  $field_instances['node-quote_source-field_qs_name_de'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 5,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_de',
+    'label' => 'Quote Source name de',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 5,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_dk'
+  $field_instances['node-quote_source-field_qs_name_dk'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 12,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_dk',
+    'label' => 'Quote Source name dk',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 11,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_en'
+  $field_instances['node-quote_source-field_qs_name_en'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 3,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_en',
+    'label' => 'Quote Source name en',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_es'
+  $field_instances['node-quote_source-field_qs_name_es'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 11,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_es',
+    'label' => 'Quote Source name es',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_et'
+  $field_instances['node-quote_source-field_qs_name_et'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 2,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_et',
+    'label' => 'Quote Source name et',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_fi'
+  $field_instances['node-quote_source-field_qs_name_fi'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 4,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_fi',
+    'label' => 'Quote Source name fi',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 4,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_fr'
+  $field_instances['node-quote_source-field_qs_name_fr'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 6,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_fr',
+    'label' => 'Quote Source name fr',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 6,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_hu'
+  $field_instances['node-quote_source-field_qs_name_hu'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 9,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_hu',
+    'label' => 'Quote Source name hu',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_name_it'
+  $field_instances['node-quote_source-field_qs_name_it'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 10,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_name_it',
+    'label' => 'Quote Source name it',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 9,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_source_day_start'
+  $field_instances['node-quote_source-field_qs_source_day_start'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 26,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_source_day_start',
+    'label' => 'Quote Source source day start',
+    'required' => 0,
+    'settings' => array(
+      'max' => 31,
+      'min' => 1,
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 25,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_source_month_start'
+  $field_instances['node-quote_source-field_qs_source_month_start'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 25,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_source_month_start',
+    'label' => 'Quote Source source month start',
+    'required' => 0,
+    'settings' => array(
+      'max' => 12,
+      'min' => 1,
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 24,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_source_year_end'
+  $field_instances['node-quote_source-field_qs_source_year_end'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 27,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_source_year_end',
+    'label' => 'Quote Source source year end',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 26,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_source_year_end_circa'
+  $field_instances['node-quote_source-field_qs_source_year_end_circa'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 28,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_source_year_end_circa',
+    'label' => 'Quote Source source year end circa',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 27,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_source_year_start'
+  $field_instances['node-quote_source-field_qs_source_year_start'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 23,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_source_year_start',
+    'label' => 'Quote Source source year start',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 22,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_source_year_start_circa'
+  $field_instances['node-quote_source-field_qs_source_year_start_circa'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'list',
+        'settings' => array(),
+        'type' => 'list_default',
+        'weight' => 24,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_source_year_start_circa',
+    'label' => 'Quote Source year start circa',
+    'required' => 0,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(
+        'display_label' => 0,
+      ),
+      'type' => 'options_onoff',
+      'weight' => 23,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url'
+  $field_instances['node-quote_source-field_qs_url'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 29,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url',
+    'label' => 'Quote Source url',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 28,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_cs'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_cs'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 19,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_cs',
+    'label' => 'Quote Source url friendly name cs',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 18,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_de'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_de'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 16,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_de',
+    'label' => 'Quote Source url friendly name de',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 15,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_dk'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_dk'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 22,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_dk',
+    'label' => 'Quote Source url friendly name dk',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 21,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_en'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_en'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 14,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_en',
+    'label' => 'Quote Source url friendly name en',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 13,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_es'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_es'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 21,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_es',
+    'label' => 'Quote Source url friendly name es',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 20,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_et'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_et'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 13,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_et',
+    'label' => 'Quote Source url friendly name et',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 12,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_fi'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_fi'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 15,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_fi',
+    'label' => 'Quote Source url friendly name fi',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 14,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_fr'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_fr'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 17,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_fr',
+    'label' => 'Quote Source url friendly name fr',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_hu'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_hu'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 18,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_hu',
+    'label' => 'Quote Source url friendly name hu',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 17,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote_source-field_qs_url_friendly_name_it'
+  $field_instances['node-quote_source-field_qs_url_friendly_name_it'] = array(
+    'bundle' => 'quote_source',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Old field.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 20,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_qs_url_friendly_name_it',
+    'label' => 'Quote Source url friendly name it',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 19,
     ),
   );
 
@@ -3052,6 +4397,40 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Profession en');
   t('Profession et');
   t('Quote');
+  t('Quote Source amazon product link de');
+  t('Quote Source amazon product link en');
+  t('Quote Source amazon product link et');
+  t('Quote Source id');
+  t('Quote Source isbn de');
+  t('Quote Source isbn en');
+  t('Quote Source isbn et');
+  t('Quote Source name cs');
+  t('Quote Source name de');
+  t('Quote Source name dk');
+  t('Quote Source name en');
+  t('Quote Source name es');
+  t('Quote Source name et');
+  t('Quote Source name fi');
+  t('Quote Source name fr');
+  t('Quote Source name hu');
+  t('Quote Source name it');
+  t('Quote Source source day start');
+  t('Quote Source source month start');
+  t('Quote Source source year end');
+  t('Quote Source source year end circa');
+  t('Quote Source source year start');
+  t('Quote Source url');
+  t('Quote Source url friendly name cs');
+  t('Quote Source url friendly name de');
+  t('Quote Source url friendly name dk');
+  t('Quote Source url friendly name en');
+  t('Quote Source url friendly name es');
+  t('Quote Source url friendly name et');
+  t('Quote Source url friendly name fi');
+  t('Quote Source url friendly name fr');
+  t('Quote Source url friendly name hu');
+  t('Quote Source url friendly name it');
+  t('Quote Source year start circa');
   t('Quote id');
   t('Rank');
   t('Revision');
