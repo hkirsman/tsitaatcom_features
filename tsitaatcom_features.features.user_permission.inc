@@ -10,7 +10,7 @@
 function tsitaatcom_features_user_default_permissions() {
   $permissions = array();
 
-  // Exported permission: delete own quote content.
+  // Exported permission: 'delete own quote content'.
   $permissions['delete own quote content'] = array(
     'name' => 'delete own quote content',
     'roles' => array(
@@ -19,7 +19,7 @@ function tsitaatcom_features_user_default_permissions() {
     'module' => 'node',
   );
 
-  // Exported permission: edit own quote content.
+  // Exported permission: 'edit own quote content'.
   $permissions['edit own quote content'] = array(
     'name' => 'edit own quote content',
     'roles' => array(
