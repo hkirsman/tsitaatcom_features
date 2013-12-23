@@ -561,7 +561,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_source',
-    'label' => 'Source',
+    'label' => 'Quote source',
     'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
@@ -576,6 +576,86 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
       'type' => 'entityreference_autocomplete',
       'weight' => 16,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_q_source_title_xtra_prefix'
+  $field_instances['node-quote-field_q_source_title_xtra_prefix'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Short information about source. Use this field if the information is specific to this quote.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 52,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_source_title_xtra_prefix',
+    'label' => 'Quote source title extra prefix',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 19,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_q_source_title_xtra_suffix'
+  $field_instances['node-quote-field_q_source_title_xtra_suffix'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Short information about source like page number. Use this field if the information is specific to this quote. If first character is comma, space is not added. Examples: ", p 23" and ", act II" and "translated by John Doe".',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 51,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_source_title_xtra_suffix',
+    'label' => 'Quote source title extra suffix',
+    'required' => 0,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 20,
     ),
   );
 
@@ -716,49 +796,6 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-quote-field_source'
-  $field_instances['node-quote-field_source'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 44,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source',
-    'label' => 'Source',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete',
-      'weight' => 15,
-    ),
-  );
-
   // Exported field_instance: 'node-quote-field_source_id'
   $field_instances['node-quote-field_source_id'] = array(
     'bundle' => 'quote',
@@ -842,86 +879,6 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
       'type' => 'text_textfield',
       'weight' => 18,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_source_title_extra_prefix'
-  $field_instances['node-quote-field_source_title_extra_prefix'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 13,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_title_extra_prefix',
-    'label' => 'Source title extra prefix',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 20,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_source_title_extra_suffix'
-  $field_instances['node-quote-field_source_title_extra_suffix'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 46,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_title_extra_suffix',
-    'label' => 'Source title extra suffix',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 19,
     ),
   );
 
@@ -4557,14 +4514,16 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Quote Source url friendly name it');
   t('Quote Source year start circa');
   t('Quote id');
+  t('Quote source');
+  t('Quote source title extra prefix');
+  t('Quote source title extra suffix');
   t('Rank');
   t('Revision');
   t('Set default category after features import.');
-  t('Source');
+  t('Short information about source like page number. Use this field if the information is specific to this quote. If first character is comma, space is not added. Examples: ", p 23" and ", act II" and "translated by John Doe".');
+  t('Short information about source. Use this field if the information is specific to this quote.');
   t('Source id');
   t('Source title');
-  t('Source title extra prefix');
-  t('Source title extra suffix');
   t('Source year end');
   t('Source year start');
   t('Source year start circa');
