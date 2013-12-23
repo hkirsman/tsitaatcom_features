@@ -7,7 +7,7 @@
 /**
  * Implements hook_views_api().
  */
-function tsitaatcom_features_views_api() {
+function tsitaatcom_features_views_api($module = NULL, $api = NULL) {
   return array("api" => "3.0");
 }
 
@@ -17,12 +17,13 @@ function tsitaatcom_features_views_api() {
 function tsitaatcom_features_image_default_styles() {
   $styles = array();
 
-  // Exported image style: tsitaatcom_quote_author_thumbnail.
-  $styles['tsitaatcom_quote_author_thumbnail'] = array(
-    'name' => 'tsitaatcom_quote_author_thumbnail',
+  // Exported image style: tsitaatcom_author_thumbnail.
+  $styles['tsitaatcom_author_thumbnail'] = array(
+    'name' => 'tsitaatcom_author_thumbnail',
+    'label' => 'tsitaatcom_author_thumbnail',
     'effects' => array(
       1 => array(
-        'label' => 'Skaleerimine',
+        'label' => 'Scale',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
         'dimensions callback' => 'image_scale_dimensions',
@@ -69,7 +70,7 @@ function tsitaatcom_features_node_info() {
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
-      'title_label' => t('Title'),
+      'title_label' => t('Pealkiri'),
       'help' => '',
     ),
     'quote_category' => array(
@@ -83,7 +84,7 @@ function tsitaatcom_features_node_info() {
     'quote_source' => array(
       'name' => t('Quote Source'),
       'base' => 'node_content',
-      'description' => '',
+      'description' => t('Source of a quote e.g. article or a movie. All the fields are prefixed as qs.'),
       'has_title' => '1',
       'title_label' => t('Pealkiri'),
       'help' => '',
