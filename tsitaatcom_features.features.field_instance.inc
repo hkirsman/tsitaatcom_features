@@ -10,51 +10,8 @@
 function tsitaatcom_features_field_default_field_instances() {
   $field_instances = array();
 
-  // Exported field_instance: 'node-quote-field_active'
-  $field_instances['node-quote-field_active'] = array(
-    'bundle' => 'quote',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'list',
-        'settings' => array(),
-        'type' => 'list_default',
-        'weight' => 39,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_active',
-    'label' => 'Active',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(
-        'display_label' => 1,
-      ),
-      'type' => 'options_onoff',
-      'weight' => 28,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_author'
-  $field_instances['node-quote-field_author'] = array(
+  // Exported field_instance: 'node-quote-field_q_author'
+  $field_instances['node-quote-field_q_author'] = array(
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
@@ -67,241 +24,19 @@ function tsitaatcom_features_field_default_field_instances() {
           'link' => FALSE,
         ),
         'type' => 'entityreference_label',
-        'weight' => 42,
+        'weight' => 58,
       ),
       'teaser' => array(
         'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => 1,
-        ),
-        'type' => 'entityreference_label',
+        'settings' => array(),
+        'type' => 'hidden',
         'weight' => 0,
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_author',
+    'field_name' => 'field_q_author',
     'label' => 'Author',
-    'required' => 0,
-    'settings' => array(
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'entityreference',
-      'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
-      ),
-      'type' => 'entityreference_autocomplete_tags',
-      'weight' => 12,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_author2_id'
-  $field_instances['node-quote-field_author2_id'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 48,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_author2_id',
-    'label' => 'Author2 id',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 14,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_author_id'
-  $field_instances['node-quote-field_author_id'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 43,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_author_id',
-    'label' => 'Author id',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 13,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_category'
-  $field_instances['node-quote-field_category'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Set default category after features import.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'taxonomy',
-        'settings' => array(),
-        'type' => 'taxonomy_term_reference_link',
-        'weight' => 36,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_category',
-    'label' => 'Category',
     'required' => 1,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'options',
-      'settings' => array(),
-      'type' => 'options_select',
-      'weight' => 6,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_category_old'
-  $field_instances['node-quote-field_category_old'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 32,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_category_old',
-    'label' => 'Category old',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 7,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_created_by'
-  $field_instances['node-quote-field_created_by'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'entityreference',
-        'settings' => array(
-          'link' => FALSE,
-        ),
-        'type' => 'entityreference_label',
-        'weight' => 41,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_created_by',
-    'label' => 'Created by',
-    'required' => 0,
     'settings' => array(
       'user_register_form' => FALSE,
     ),
@@ -314,16 +49,16 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 24,
+      'weight' => 6,
     ),
   );
 
-  // Exported field_instance: 'node-quote-field_created_by_old'
-  $field_instances['node-quote-field_created_by_old'] = array(
+  // Exported field_instance: 'node-quote-field_q_author2_id_old'
+  $field_instances['node-quote-field_q_author2_id_old'] = array(
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Old field.',
+    'description' => 'Field required for migration. Can be deleted after migration.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -335,7 +70,7 @@ function tsitaatcom_features_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 40,
+        'weight' => 60,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -345,8 +80,8 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_created_by_old',
-    'label' => 'Created by old',
+    'field_name' => 'field_q_author2_id_old',
+    'label' => 'Author 2 (old field)',
     'required' => 0,
     'settings' => array(
       'max' => '',
@@ -360,56 +95,16 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 25,
+      'weight' => 11,
     ),
   );
 
-  // Exported field_instance: 'node-quote-field_created_time'
-  $field_instances['node-quote-field_created_time'] = array(
+  // Exported field_instance: 'node-quote-field_q_author_id_old'
+  $field_instances['node-quote-field_q_author_id_old'] = array(
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 18,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_created_time',
-    'label' => 'Created time',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 26,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_id'
-  $field_instances['node-quote-field_id'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
+    'description' => 'Field required for migration. Can be deleted after migration.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -421,7 +116,7 @@ function tsitaatcom_features_field_default_field_instances() {
           'thousand_separator' => ' ',
         ),
         'type' => 'number_integer',
-        'weight' => 29,
+        'weight' => 59,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -431,12 +126,143 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_id',
-    'label' => 'Id',
+    'field_name' => 'field_q_author_id_old',
+    'label' => 'Author (old)',
     'required' => 0,
     'settings' => array(
       'max' => '',
-      'min' => 0,
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 10,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_q_category'
+  $field_instances['node-quote-field_q_category'] = array(
+    'bundle' => 'quote',
+    'default_value' => array(
+      0 => array(
+        'tid' => 2722,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'taxonomy',
+        'settings' => array(),
+        'type' => 'taxonomy_term_reference_link',
+        'weight' => 55,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_category',
+    'label' => 'Category',
+    'required' => 1,
+    'settings' => array(
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'options',
+      'settings' => array(),
+      'type' => 'options_select',
+      'weight' => 3,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_q_quote'
+  $field_instances['node-quote-field_q_quote'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 54,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_quote',
+    'label' => 'Quote',
+    'required' => 1,
+    'settings' => array(
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'rows' => 5,
+      ),
+      'type' => 'text_textarea',
+      'weight' => 2,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_q_rank'
+  $field_instances['node-quote-field_q_rank'] = array(
+    'bundle' => 'quote',
+    'default_value' => array(
+      0 => array(
+        'value' => 0,
+      ),
+    ),
+    'deleted' => 0,
+    'description' => '',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 53,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_rank',
+    'label' => 'Rank',
+    'required' => 1,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
       'prefix' => '',
       'suffix' => '',
       'user_register_form' => FALSE,
@@ -447,92 +273,6 @@ function tsitaatcom_features_field_default_field_instances() {
       'settings' => array(),
       'type' => 'number',
       'weight' => 1,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_lang'
-  $field_instances['node-quote-field_lang'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 2,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_lang',
-    'label' => 'Language',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 2,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 3,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_q_id'
-  $field_instances['node-quote-field_q_id'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 30,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_q_id',
-    'label' => 'Quote id',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => 0,
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 2,
     ),
   );
 
@@ -575,7 +315,53 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 16,
+      'weight' => 7,
+    ),
+  );
+
+  // Exported field_instance: 'node-quote-field_q_source_id_old'
+  $field_instances['node-quote-field_q_source_id_old'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'Field required for migration. Can be deleted after migration.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'number',
+        'settings' => array(
+          'decimal_separator' => '.',
+          'prefix_suffix' => TRUE,
+          'scale' => 0,
+          'thousand_separator' => ' ',
+        ),
+        'type' => 'number_integer',
+        'weight' => 61,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_source_id_old',
+    'label' => 'Source (old field)',
+    'required' => 0,
+    'settings' => array(
+      'max' => '',
+      'min' => '',
+      'prefix' => '',
+      'suffix' => '',
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 0,
+      'module' => 'number',
+      'settings' => array(),
+      'type' => 'number',
+      'weight' => 12,
     ),
   );
 
@@ -615,7 +401,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 19,
+      'weight' => 8,
     ),
   );
 
@@ -655,355 +441,12 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 20,
+      'weight' => 9,
     ),
   );
 
-  // Exported field_instance: 'node-quote-field_quote'
-  $field_instances['node-quote-field_quote'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 4,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_plain',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_quote',
-    'label' => 'Quote',
-    'required' => 1,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'rows' => 5,
-      ),
-      'type' => 'text_textarea',
-      'weight' => 5,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_rank'
-  $field_instances['node-quote-field_rank'] = array(
-    'bundle' => 'quote',
-    'default_value' => array(
-      0 => array(
-        'value' => 0,
-      ),
-    ),
-    'deleted' => 0,
-    'description' => '',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 31,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_rank',
-    'label' => 'Rank',
-    'required' => 1,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 4,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_revision'
-  $field_instances['node-quote-field_revision'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 47,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_revision',
-    'label' => 'Revision',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 27,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_source_id'
-  $field_instances['node-quote-field_source_id'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 45,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_id',
-    'label' => 'Source id',
-    'required' => 0,
-    'settings' => array(
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 17,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_source_title'
-  $field_instances['node-quote-field_source_title'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 11,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_title',
-    'label' => 'Source title',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 18,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_source_year_end'
-  $field_instances['node-quote-field_source_year_end'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 16,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_year_end',
-    'label' => 'Source year end',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 23,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_source_year_start'
-  $field_instances['node-quote-field_source_year_start'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 14,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_year_start',
-    'label' => 'Source year start',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 21,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_source_year_start_circa'
-  $field_instances['node-quote-field_source_year_start_circa'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 15,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_source_year_start_circa',
-    'label' => 'Source year start circa',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 22,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_tag'
-  $field_instances['node-quote-field_tag'] = array(
+  // Exported field_instance: 'node-quote-field_q_tag'
+  $field_instances['node-quote-field_q_tag'] = array(
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1014,7 +457,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'module' => 'taxonomy',
         'settings' => array(),
         'type' => 'taxonomy_term_reference_link',
-        'weight' => 35,
+        'weight' => 56,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1024,11 +467,10 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_tag',
+    'field_name' => 'field_q_tag',
     'label' => 'Tag',
     'required' => 0,
     'settings' => array(
-      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1039,12 +481,12 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 9,
+      'weight' => 4,
     ),
   );
 
-  // Exported field_instance: 'node-quote-field_tag_auto'
-  $field_instances['node-quote-field_tag_auto'] = array(
+  // Exported field_instance: 'node-quote-field_q_tag_auto'
+  $field_instances['node-quote-field_q_tag_auto'] = array(
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
@@ -1055,7 +497,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'module' => 'text',
         'settings' => array(),
         'type' => 'text_default',
-        'weight' => 49,
+        'weight' => 57,
       ),
       'teaser' => array(
         'label' => 'above',
@@ -1065,7 +507,7 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
     ),
     'entity_type' => 'node',
-    'field_name' => 'field_tag_auto',
+    'field_name' => 'field_q_tag_auto',
     'label' => 'Tag auto',
     'required' => 0,
     'settings' => array(
@@ -1079,87 +521,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_tag_old'
-  $field_instances['node-quote-field_tag_old'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 34,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_tag_old',
-    'label' => 'Tag old',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 11,
-    ),
-  );
-
-  // Exported field_instance: 'node-quote-field_zitate_de_category'
-  $field_instances['node-quote-field_zitate_de_category'] = array(
-    'bundle' => 'quote',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Old field.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'text',
-        'settings' => array(),
-        'type' => 'text_default',
-        'weight' => 6,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_zitate_de_category',
-    'label' => 'Zitate de category',
-    'required' => 0,
-    'settings' => array(
-      'text_processing' => 0,
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 1,
-      'module' => 'text',
-      'settings' => array(
-        'size' => 60,
-      ),
-      'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 5,
     ),
   );
 
@@ -1304,7 +666,7 @@ function tsitaatcom_features_field_default_field_instances() {
       ),
     ),
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Old field.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -4432,28 +3794,24 @@ function tsitaatcom_features_field_default_field_instances() {
   // Included for use with string extractors like potx.
   t('Active');
   t('Author');
+  t('Author (old)');
+  t('Author 2 (old field)');
   t('Author Portrait');
   t('Author Portrait Ref');
-  t('Author id');
-  t('Author2 id');
   t('Body');
   t('Born');
   t('Born circa');
   t('Born death circa');
   t('Category');
-  t('Category old');
-  t('Created by');
-  t('Created by old');
-  t('Created time');
   t('Death');
   t('Death circa');
+  t('Field required for migration. Can be deleted after migration.');
   t('Firstname');
   t('Firstname de');
   t('Firstname en');
   t('Firstname et');
   t('Id');
   t('Is tsitaatcom user');
-  t('Language');
   t('Lastname');
   t('Lastname de');
   t('Lastname en');
@@ -4513,23 +3871,15 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Quote Source url friendly name hu');
   t('Quote Source url friendly name it');
   t('Quote Source year start circa');
-  t('Quote id');
   t('Quote source');
   t('Quote source title extra prefix');
   t('Quote source title extra suffix');
   t('Rank');
-  t('Revision');
-  t('Set default category after features import.');
   t('Short information about source like page number. Use this field if the information is specific to this quote. If first character is comma, space is not added. Examples: ", p 23" and ", act II" and "translated by John Doe".');
   t('Short information about source. Use this field if the information is specific to this quote.');
-  t('Source id');
-  t('Source title');
-  t('Source year end');
-  t('Source year start');
-  t('Source year start circa');
+  t('Source (old field)');
   t('Tag');
   t('Tag auto');
-  t('Tag old');
   t('Urlfriendly author name');
   t('Urlfriendly author name de');
   t('Urlfriendly author name en');
@@ -4539,7 +3889,6 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Wiki url de');
   t('Wiki url en');
   t('Wiki url et');
-  t('Zitate de category');
 
   return $field_instances;
 }
