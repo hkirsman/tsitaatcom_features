@@ -38,6 +38,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Author',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -49,7 +50,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 6,
+      'weight' => 7,
     ),
   );
 
@@ -84,6 +85,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Author 2 (old field)',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -95,7 +97,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 11,
+      'weight' => 12,
     ),
   );
 
@@ -130,6 +132,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Author (old)',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -141,7 +144,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 10,
+      'weight' => 11,
     ),
   );
 
@@ -175,6 +178,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Category',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -182,7 +186,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 3,
+      'weight' => 4,
     ),
   );
 
@@ -212,6 +216,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -222,7 +227,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 2,
+      'weight' => 3,
     ),
   );
 
@@ -261,6 +266,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Rank',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -272,7 +278,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 1,
+      'weight' => 2,
     ),
   );
 
@@ -304,6 +310,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote source',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -315,7 +322,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 8,
     ),
   );
 
@@ -350,6 +357,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Source (old field)',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -361,7 +369,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 12,
+      'weight' => 13,
     ),
   );
 
@@ -391,6 +399,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote source title extra prefix',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -401,7 +410,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 8,
+      'weight' => 9,
     ),
   );
 
@@ -431,6 +440,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote source title extra suffix',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -441,7 +451,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 10,
     ),
   );
 
@@ -471,6 +481,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Tag',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -481,7 +492,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 4,
+      'weight' => 5,
     ),
   );
 
@@ -511,6 +522,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Tag auto',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -521,7 +533,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 6,
     ),
   );
 
@@ -555,6 +567,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Active',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -599,6 +612,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Born',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -644,6 +658,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Born circa',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -687,6 +702,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Born death circa',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -731,6 +747,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Death',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -776,6 +793,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Death circa',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -815,6 +833,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Firstname',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -855,6 +874,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Firstname de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -895,6 +915,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Firstname en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -935,6 +956,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Firstname et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -975,6 +997,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Lastname',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1015,6 +1038,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Lastname de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1055,6 +1079,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Lastname en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1095,6 +1120,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Lastname et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1135,6 +1161,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Midname',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1175,6 +1202,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Midname de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1215,6 +1243,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Midname en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1255,6 +1284,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Midname et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1295,6 +1325,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Name amazon',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1335,6 +1366,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Name freeform',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1375,6 +1407,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Name freeform de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1415,6 +1448,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Name freeform en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1455,6 +1489,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Name freeform et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1495,6 +1530,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Nationality',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1537,6 +1573,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Author Portrait Ref',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1574,6 +1611,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Profession',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1614,6 +1652,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Profession de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1654,6 +1693,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Profession en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1694,6 +1734,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Profession et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1734,6 +1775,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Wiki url',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1774,6 +1816,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Wiki url de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1814,6 +1857,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Wiki url en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1854,6 +1898,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Wiki url et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -1899,6 +1944,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Id',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -1944,6 +1990,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Is tsitaatcom user',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -1983,6 +2030,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Urlfriendly author name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2023,6 +2071,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Urlfriendly author name de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2063,6 +2112,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Urlfriendly author name en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2103,6 +2153,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Urlfriendly author name et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2147,6 +2198,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'settings' => array(
       'alt_field' => 0,
       'default_image' => 0,
+      'entity_translation_sync' => FALSE,
       'file_directory' => '',
       'file_extensions' => 'png gif jpg jpeg',
       'max_filesize' => '',
@@ -2238,6 +2290,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source amazon product link de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2278,6 +2331,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source amazon product link en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2318,6 +2372,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source amazon product link et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2363,6 +2418,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source id',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -2404,6 +2460,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source isbn de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2444,6 +2501,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source isbn en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2484,6 +2542,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source isbn et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2524,6 +2583,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name',
     'required' => 1,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2564,6 +2624,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name cs',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2604,6 +2665,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2644,6 +2706,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name dk',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2684,6 +2747,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2724,6 +2788,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name es',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2764,6 +2829,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2804,6 +2870,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name fi',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2844,6 +2911,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name fr',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2884,6 +2952,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name hu',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2924,6 +2993,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source name it',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -2969,6 +3039,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source source day start',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => 31,
       'min' => 1,
       'prefix' => '',
@@ -3015,6 +3086,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source source month start',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => 12,
       'min' => 1,
       'prefix' => '',
@@ -3061,6 +3133,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source source year end',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -3106,6 +3179,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source source year end circa',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3145,6 +3219,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source source year start',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3189,6 +3264,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source year start circa',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'user_register_form' => FALSE,
     ),
     'widget' => array(
@@ -3228,6 +3304,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3268,6 +3345,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source friendly name',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3308,6 +3386,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name cs',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3348,6 +3427,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name de',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3388,6 +3468,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name dk',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3428,6 +3509,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3468,6 +3550,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name es',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3508,6 +3591,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3548,6 +3632,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name fi',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3588,6 +3673,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name fr',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3628,6 +3714,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name hu',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3668,6 +3755,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Quote Source url friendly name it',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3707,6 +3795,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Id',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'max' => '',
       'min' => '',
       'prefix' => '',
@@ -3742,6 +3831,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Name en',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
@@ -3776,6 +3866,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'label' => 'Name et',
     'required' => 0,
     'settings' => array(
+      'entity_translation_sync' => FALSE,
       'text_processing' => 0,
       'user_register_form' => FALSE,
     ),
