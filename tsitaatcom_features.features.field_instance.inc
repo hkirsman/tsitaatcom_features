@@ -190,6 +190,47 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
   );
 
+  // Exported field_instance: 'node-quote-field_q_language_auto'
+  $field_instances['node-quote-field_q_language_auto'] = array(
+    'bundle' => 'quote',
+    'default_value' => NULL,
+    'deleted' => 0,
+    'description' => 'On quote save, we\'ll populate all the active translations to this field as serialized string for easier database query.',
+    'display' => array(
+      'default' => array(
+        'label' => 'above',
+        'module' => 'text',
+        'settings' => array(),
+        'type' => 'text_default',
+        'weight' => 62,
+      ),
+      'teaser' => array(
+        'label' => 'above',
+        'settings' => array(),
+        'type' => 'hidden',
+        'weight' => 0,
+      ),
+    ),
+    'entity_type' => 'node',
+    'field_name' => 'field_q_language_auto',
+    'label' => 'Language auto',
+    'required' => 0,
+    'settings' => array(
+      'entity_translation_sync' => FALSE,
+      'text_processing' => 0,
+      'user_register_form' => FALSE,
+    ),
+    'widget' => array(
+      'active' => 1,
+      'module' => 'text',
+      'settings' => array(
+        'size' => 60,
+      ),
+      'type' => 'text_textfield',
+      'weight' => 0,
+    ),
+  );
+
   // Exported field_instance: 'node-quote-field_q_quote'
   $field_instances['node-quote-field_q_quote'] = array(
     'bundle' => 'quote',
@@ -3903,6 +3944,7 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Firstname et');
   t('Id');
   t('Is tsitaatcom user');
+  t('Language auto');
   t('Lastname');
   t('Lastname de');
   t('Lastname en');
@@ -3920,6 +3962,7 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Name freeform et');
   t('Nationality');
   t('Old field.');
+  t('On quote save, we\'ll populate all the active translations to this field as serialized string for easier database query.');
   t('On quote save, we\'ll populate all the tags to this field as string. This is for easier database query.');
   t('Profession');
   t('Profession de');
