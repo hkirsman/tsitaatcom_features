@@ -50,7 +50,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 7,
+      'weight' => 3,
     ),
   );
 
@@ -186,7 +186,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 4,
+      'weight' => 1,
     ),
   );
 
@@ -227,7 +227,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 0,
+      'weight' => 7,
     ),
   );
 
@@ -268,7 +268,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'rows' => 5,
       ),
       'type' => 'text_textarea',
-      'weight' => 3,
+      'weight' => 0,
     ),
   );
 
@@ -319,7 +319,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 2,
+      'weight' => 9,
     ),
   );
 
@@ -363,7 +363,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'entityreference_autocomplete',
-      'weight' => 8,
+      'weight' => 4,
     ),
   );
 
@@ -451,7 +451,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 5,
     ),
   );
 
@@ -492,7 +492,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 6,
     ),
   );
 
@@ -533,7 +533,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'taxonomy_autocomplete',
-      'weight' => 5,
+      'weight' => 2,
     ),
   );
 
@@ -574,7 +574,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 6,
+      'weight' => 10,
     ),
   );
 
