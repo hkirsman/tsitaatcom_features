@@ -268,9 +268,6 @@ function tsitaatcom_features_strongarm() {
   $strongarm->name = 'entity_translation_entity_types';
   $strongarm->value = array(
     'node' => 'node',
-    'comment' => 0,
-    'taxonomy_term' => 0,
-    'user' => 0,
   );
   $export['entity_translation_entity_types'] = $strongarm;
 
@@ -334,6 +331,23 @@ function tsitaatcom_features_strongarm() {
     ),
   );
   $export['field_bundle_settings_node__quote'] = $strongarm;
+
+  $strongarm = new stdClass();
+  $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
+  $strongarm->api_version = 1;
+  $strongarm->name = 'field_bundle_settings_node__quote_author';
+  $strongarm->value = array(
+    'view_modes' => array(),
+    'extra_fields' => array(
+      'form' => array(
+        'title' => array(
+          'weight' => '0',
+        ),
+      ),
+      'display' => array(),
+    ),
+  );
+  $export['field_bundle_settings_node__quote_author'] = $strongarm;
 
   $strongarm = new stdClass();
   $strongarm->disabled = FALSE; /* Edit this to true to make a default strongarm disabled initially */
