@@ -82,14 +82,6 @@ function tsitaatcom_features_node_info() {
       'title_label' => t('Pealkiri'),
       'help' => '',
     ),
-    'quote_category' => array(
-      'name' => t('Quote Category'),
-      'base' => 'node_content',
-      'description' => '',
-      'has_title' => '1',
-      'title_label' => t('Pealkiri'),
-      'help' => '',
-    ),
     'quote_source' => array(
       'name' => t('Quote Source'),
       'base' => 'node_content',
