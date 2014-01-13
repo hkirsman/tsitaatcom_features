@@ -15,6 +15,7 @@ function tsitaatcom_features_user_default_permissions() {
     'name' => 'delete own quote content',
     'roles' => array(
       'authenticated user' => 'authenticated user',
+      'editor' => 'editor',
     ),
     'module' => 'node',
   );

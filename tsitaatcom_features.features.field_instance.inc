@@ -35,7 +35,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_author',
-    'label' => 'Author',
+    'label' => 'Autor',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -151,11 +151,7 @@ function tsitaatcom_features_field_default_field_instances() {
   // Exported field_instance: 'node-quote-field_q_category'
   $field_instances['node-quote-field_q_category'] = array(
     'bundle' => 'quote',
-    'default_value' => array(
-      0 => array(
-        'tid' => 2722,
-      ),
-    ),
+    'default_value' => NULL,
     'deleted' => 0,
     'description' => '',
     'display' => array(
@@ -175,7 +171,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_category',
-    'label' => 'Category',
+    'label' => 'Kategooria',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -254,7 +250,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_quote',
-    'label' => 'Quote',
+    'label' => 'Tsitaat',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -348,7 +344,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_source',
-    'label' => 'Quote source',
+    'label' => 'Allikas',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -437,7 +433,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_source_title_xtra_prefix',
-    'label' => 'Quote source title extra prefix',
+    'label' => 'Allika prefiks',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -478,7 +474,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_source_title_xtra_suffix',
-    'label' => 'Quote source title extra suffix',
+    'label' => 'Allika sufiks',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -519,7 +515,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_tag',
-    'label' => 'Tag',
+    'label' => 'Võtmesõna(d)',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -606,7 +602,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_born_year',
-    'label' => 'Born',
+    'label' => 'Sünniaasta',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -621,7 +617,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -652,7 +648,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_born_year_circa',
-    'label' => 'Born circa',
+    'label' => 'Sünniaasta ebatäpne',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -665,7 +661,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -697,7 +693,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_death_year',
-    'label' => 'Death',
+    'label' => 'Surmaasta',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -712,7 +708,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 8,
+      'weight' => 6,
     ),
   );
 
@@ -743,7 +739,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_death_year_circa',
-    'label' => 'Death circa',
+    'label' => 'Surmaasta ebatäpne',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -756,7 +752,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -783,7 +779,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_firstname',
-    'label' => 'Firstname',
+    'label' => 'Eesnimi',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -797,7 +793,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -844,7 +840,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 16,
+      'weight' => 14,
     ),
   );
 
@@ -875,7 +871,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_is_tsitaatcom_user',
-    'label' => 'Is tsitaatcom user?',
+    'label' => 'On tsitaat.com kasutaja?',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -888,7 +884,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -915,7 +911,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_lastname',
-    'label' => 'Lastname',
+    'label' => 'Perenimi',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -929,7 +925,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -956,7 +952,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_midname',
-    'label' => 'Midname',
+    'label' => 'Keskmine nimi',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -970,7 +966,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -997,7 +993,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_name_freeform',
-    'label' => 'Name freeform',
+    'label' => 'Nimi vabas vormis',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1011,7 +1007,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
@@ -1040,7 +1036,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_portrait_ref',
-    'label' => 'Portrait',
+    'label' => 'Pilt',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1051,7 +1047,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'options',
       'settings' => array(),
       'type' => 'options_select',
-      'weight' => 15,
+      'weight' => 12,
     ),
   );
 
@@ -1078,7 +1074,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_profession',
-    'label' => 'Profession',
+    'label' => 'Kes on/oli',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1092,7 +1088,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 8,
     ),
   );
 
@@ -1119,7 +1115,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_url_alias',
-    'label' => 'URL alias',
+    'label' => 'Lingi alias',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1133,7 +1129,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 13,
+      'weight' => 11,
     ),
   );
 
@@ -1160,7 +1156,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_qa_wiki_url',
-    'label' => 'Wiki URL',
+    'label' => 'Wiki link',
     'required' => 0,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -1174,7 +1170,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -1311,7 +1307,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 10,
+      'weight' => 8,
     ),
   );
 
@@ -1399,7 +1395,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 11,
+      'weight' => 9,
     ),
   );
 
@@ -1440,7 +1436,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 2,
+      'weight' => 0,
     ),
   );
 
@@ -1487,7 +1483,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 6,
+      'weight' => 4,
     ),
   );
 
@@ -1534,7 +1530,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 5,
+      'weight' => 3,
     ),
   );
 
@@ -1581,7 +1577,7 @@ function tsitaatcom_features_field_default_field_instances() {
       'module' => 'number',
       'settings' => array(),
       'type' => 'number',
-      'weight' => 7,
+      'weight' => 5,
     ),
   );
 
@@ -1625,7 +1621,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 8,
+      'weight' => 6,
     ),
   );
 
@@ -1666,7 +1662,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 3,
+      'weight' => 1,
     ),
   );
 
@@ -1710,7 +1706,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'display_label' => 1,
       ),
       'type' => 'options_onoff',
-      'weight' => 4,
+      'weight' => 2,
     ),
   );
 
@@ -1751,7 +1747,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 9,
+      'weight' => 7,
     ),
   );
 
@@ -1792,7 +1788,7 @@ function tsitaatcom_features_field_default_field_instances() {
         'size' => 60,
       ),
       'type' => 'text_textfield',
-      'weight' => 12,
+      'weight' => 10,
     ),
   );
 
@@ -1909,52 +1905,54 @@ function tsitaatcom_features_field_default_field_instances() {
 
   // Translatables
   // Included for use with string extractors like potx.
+  t('Allika prefiks');
+  t('Allika sufiks');
+  t('Allikas');
   t('Amazon product URL');
-  t('Author');
   t('Author (old field)');
   t('Author 2 (old field)');
+  t('Autor');
   t('Body');
-  t('Born');
-  t('Born circa');
-  t('Category');
   t('Day start');
-  t('Death');
-  t('Death circa');
+  t('Eesnimi');
   t('Field required for migration. Can be deleted after migration.');
-  t('Firstname');
   t('ISBN');
   t('Id');
   t('Id (old field)');
-  t('Is tsitaatcom user?');
+  t('Kategooria');
+  t('Kes on/oli');
+  t('Keskmine nimi');
   t('Language auto');
-  t('Lastname');
+  t('Lingi alias');
   t('Lisa sisu viide kui see on olemas.');
-  t('Midname');
   t('Month start');
   t('Name');
   t('Name en');
   t('Name et');
-  t('Name freeform');
   t('Need only during migration.');
+  t('Nimi vabas vormis');
   t('Old field.');
   t('On quote save, we\'ll populate all the active translations to this field as serialized string for easier database query.');
   t('On quote save, we\'ll populate all the tags to this field as string. This is for easier database query.');
+  t('On tsitaat.com kasutaja?');
+  t('Perenimi');
+  t('Pilt');
   t('Portrait');
-  t('Profession');
-  t('Quote');
   t('Quote Source id (old field)');
-  t('Quote source');
-  t('Quote source title extra prefix');
-  t('Quote source title extra suffix');
   t('Rank');
   t('Short information about source like page number. Use this field if the information is specific to this quote. If first character is comma, space is not added. Examples: ", p 23" and ", act II" and "translated by John Doe".');
   t('Short information about source. Use this field if the information is specific to this quote.');
   t('Source (old field)');
   t('Source URL');
-  t('Tag');
+  t('Surmaasta');
+  t('Surmaasta ebatäpne');
+  t('Sünniaasta');
+  t('Sünniaasta ebatäpne');
   t('Tag auto');
+  t('Tsitaat');
   t('URL alias');
-  t('Wiki URL');
+  t('Võtmesõna(d)');
+  t('Wiki link');
   t('Year end');
   t('Year end circa');
   t('Year start');

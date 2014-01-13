@@ -77,7 +77,7 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['fields']['title']['field'] = 'title';
   $handler->display->display_options['fields']['title']['alter']['word_boundary'] = FALSE;
   $handler->display->display_options['fields']['title']['alter']['ellipsis'] = FALSE;
-  /* Väli: Sisu: Quote */
+  /* Väli: Sisu: Tsitaat */
   $handler->display->display_options['fields']['field_q_quote']['id'] = 'field_q_quote';
   $handler->display->display_options['fields']['field_q_quote']['table'] = 'field_data_field_q_quote';
   $handler->display->display_options['fields']['field_q_quote']['field'] = 'field_q_quote';
@@ -120,6 +120,23 @@ function tsitaatcom_features_views_default_views() {
   $handler->display->display_options['filters']['type']['value'] = array(
     'quote' => 'quote',
   );
+  /* Filter criterion: Kasutaja: Nimi */
+  $handler->display->display_options['filters']['uid']['id'] = 'uid';
+  $handler->display->display_options['filters']['uid']['table'] = 'users';
+  $handler->display->display_options['filters']['uid']['field'] = 'uid';
+  $handler->display->display_options['filters']['uid']['relationship'] = 'uid';
+  $handler->display->display_options['filters']['uid']['value'] = '';
+  $handler->display->display_options['filters']['uid']['exposed'] = TRUE;
+  $handler->display->display_options['filters']['uid']['expose']['operator_id'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['label'] = 'Nimi';
+  $handler->display->display_options['filters']['uid']['expose']['operator'] = 'uid_op';
+  $handler->display->display_options['filters']['uid']['expose']['identifier'] = 'uid';
+  $handler->display->display_options['filters']['uid']['expose']['remember_roles'] = array(
+    2 => '2',
+    1 => 0,
+    4 => 0,
+    3 => 0,
+  );
 
   /* Display: Page */
   $handler = $view->new_display('page', 'Page', 'page');
@@ -148,7 +165,7 @@ function tsitaatcom_features_views_default_views() {
     t('viimane »'),
     t('author'),
     t('Pealkiri'),
-    t('Quote'),
+    t('Tsitaat'),
     t('Nimi'),
     t('Edit link'),
     t('Avaldatud'),

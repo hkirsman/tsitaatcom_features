@@ -59,7 +59,7 @@ function tsitaatcom_features_image_default_styles() {
 function tsitaatcom_features_node_info() {
   $items = array(
     'quote' => array(
-      'name' => t('Quote'),
+      'name' => t('Tsitaat'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -67,7 +67,7 @@ function tsitaatcom_features_node_info() {
       'help' => '',
     ),
     'quote_author' => array(
-      'name' => t('Quote Author'),
+      'name' => t('Autor'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -75,7 +75,7 @@ function tsitaatcom_features_node_info() {
       'help' => '',
     ),
     'quote_author_portrait' => array(
-      'name' => t('Quote Author Portrait'),
+      'name' => t('Pilt'),
       'base' => 'node_content',
       'description' => '',
       'has_title' => '1',
@@ -83,7 +83,7 @@ function tsitaatcom_features_node_info() {
       'help' => '',
     ),
     'quote_source' => array(
-      'name' => t('Quote Source'),
+      'name' => t('Allikas'),
       'base' => 'node_content',
       'description' => t('Source of a quote e.g. article or a movie. All the fields are prefixed as qs.'),
       'has_title' => '1',
