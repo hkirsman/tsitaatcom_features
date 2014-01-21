@@ -15,7 +15,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vali lisatavale tsitaadile autor. Kui ei leia õiget autorit, siis soovita uut.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -35,7 +35,7 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'entity_type' => 'node',
     'field_name' => 'field_q_author',
-    'label' => 'Autor',
+    'label' => 'Tsitaadi autor(id)',
     'required' => 1,
     'settings' => array(
       'entity_translation_sync' => FALSE,
@@ -43,13 +43,11 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'options',
       'settings' => array(
-        'match_operator' => 'CONTAINS',
-        'path' => '',
-        'size' => 60,
+        'apply_chosen' => 0,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'options_select',
       'weight' => 3,
     ),
   );
@@ -153,7 +151,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Vali sobilik kategooria lisatavale tsitaadile. Kui ei leia õiget kategooriat, siis jäta “Kategoriata”.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -180,7 +178,9 @@ function tsitaatcom_features_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
       'type' => 'options_select',
       'weight' => 1,
     ),
@@ -232,7 +232,7 @@ function tsitaatcom_features_field_default_field_instances() {
     'bundle' => 'quote',
     'default_value' => NULL,
     'deleted' => 0,
-    'description' => '',
+    'description' => 'Enne tsitaadi lisamist kontrolli, et lisatavat tsitaati ei oleks lehe olemas.',
     'display' => array(
       'default' => array(
         'label' => 'above',
@@ -352,13 +352,14 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 1,
-      'module' => 'entityreference',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => 0,
         'match_operator' => 'CONTAINS',
         'path' => '',
         'size' => 60,
       ),
-      'type' => 'entityreference_autocomplete',
+      'type' => 'options_select',
       'weight' => 4,
     ),
   );
@@ -523,12 +524,14 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
     'widget' => array(
       'active' => 0,
-      'module' => 'taxonomy',
+      'module' => 'options',
       'settings' => array(
+        'apply_chosen' => 0,
+        'autocomplete_match' => 'contains',
         'autocomplete_path' => 'taxonomy/autocomplete',
         'size' => 60,
       ),
-      'type' => 'taxonomy_autocomplete',
+      'type' => 'options_select',
       'weight' => 2,
     ),
   );
@@ -1045,7 +1048,9 @@ function tsitaatcom_features_field_default_field_instances() {
     'widget' => array(
       'active' => 1,
       'module' => 'options',
-      'settings' => array(),
+      'settings' => array(
+        'apply_chosen' => 0,
+      ),
       'type' => 'options_select',
       'weight' => 12,
     ),
@@ -1911,10 +1916,10 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Amazon product URL');
   t('Author (old field)');
   t('Author 2 (old field)');
-  t('Autor');
   t('Body');
   t('Day start');
   t('Eesnimi');
+  t('Enne tsitaadi lisamist kontrolli, et lisatavat tsitaati ei oleks lehe olemas.');
   t('Field required for migration. Can be deleted after migration.');
   t('ISBN');
   t('Id');
@@ -1949,8 +1954,11 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Sünniaasta');
   t('Sünniaasta ebatäpne');
   t('Tag auto');
+  t('Tsitaadi autor(id)');
   t('Tsitaat');
   t('URL alias');
+  t('Vali lisatavale tsitaadile autor. Kui ei leia õiget autorit, siis soovita uut.');
+  t('Vali sobilik kategooria lisatavale tsitaadile. Kui ei leia õiget kategooriat, siis jäta “Kategoriata”.');
   t('Võtmesõna(d)');
   t('Wiki link');
   t('Year end');
