@@ -29,10 +29,10 @@ function tsitaatcom_features_image_default_styles() {
   // Exported image style: tsitaatcom_author_thumbnail.
   $styles['tsitaatcom_author_thumbnail'] = array(
     'name' => 'tsitaatcom_author_thumbnail',
-    'label' => 'tsitaatcom_author_thumbnail',
+    'label' => 'TsitaatCom Author Thumbnail',
     'effects' => array(
       1 => array(
-        'label' => 'Scale',
+        'label' => 'Skaleerimine',
         'help' => 'Scaling will maintain the aspect-ratio of the original image. If only a single dimension is specified, the other dimension will be calculated.',
         'effect callback' => 'image_scale_effect',
         'dimensions callback' => 'image_scale_dimensions',
@@ -46,6 +46,22 @@ function tsitaatcom_features_image_default_styles() {
           'upscale' => 0,
         ),
         'weight' => 1,
+      ),
+      2 => array(
+        'label' => 'Lõika',
+        'help' => 'Cropping will remove portions of an image to make it the specified dimensions.',
+        'effect callback' => 'image_crop_effect',
+        'dimensions callback' => 'image_resize_dimensions',
+        'form callback' => 'image_crop_form',
+        'summary theme' => 'image_crop_summary',
+        'module' => 'image',
+        'name' => 'image_crop',
+        'data' => array(
+          'width' => 90,
+          'height' => 90,
+          'anchor' => 'center-center',
+        ),
+        'weight' => 2,
       ),
     ),
   );
