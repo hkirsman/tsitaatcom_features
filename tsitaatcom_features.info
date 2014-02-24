@@ -134,6 +134,7 @@ features[taxonomy][] = quote_category
 features[taxonomy][] = quote_tag
 features[user_permission][] = delete own quote content
 features[user_permission][] = edit own quote content
+features[user_permission][] = use hybridauth
 features[user_role][] = administrator
 features[user_role][] = editor
 features[variable][] = comment_anonymous_quote

@@ -1531,7 +1531,7 @@ function tsitaatcom_features_strongarm() {
     'mothership_classes_form_wrapper_formtype' => 1,
     'mothership_classes_form_wrapper_formname' => 1,
     'mothership_classes_form_freeform' => '',
-    'mothership_classes_form_label' => 1,
+    'mothership_classes_form_label' => 0,
     'mothership_classes_form_input' => 1,
     'mothership_form_required' => 1,
     'mothership_classes_form_description' => 1,

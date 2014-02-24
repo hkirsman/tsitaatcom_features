@@ -29,5 +29,15 @@ function tsitaatcom_features_user_default_permissions() {
     'module' => 'node',
   );
 
+  // Exported permission: 'use hybridauth'.
+  $permissions['use hybridauth'] = array(
+    'name' => 'use hybridauth',
+    'roles' => array(
+      'anonymous user' => 'anonymous user',
+      'authenticated user' => 'authenticated user',
+    ),
+    'module' => 'hybridauth',
+  );
+
   return $permissions;
 }
