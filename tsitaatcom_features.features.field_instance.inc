@@ -800,53 +800,6 @@ function tsitaatcom_features_field_default_field_instances() {
     ),
   );
 
-  // Exported field_instance: 'node-quote_author-field_qa_id'
-  $field_instances['node-quote_author-field_qa_id'] = array(
-    'bundle' => 'quote_author',
-    'default_value' => NULL,
-    'deleted' => 0,
-    'description' => 'Need only during migration.',
-    'display' => array(
-      'default' => array(
-        'label' => 'above',
-        'module' => 'number',
-        'settings' => array(
-          'decimal_separator' => '.',
-          'prefix_suffix' => TRUE,
-          'scale' => 0,
-          'thousand_separator' => ' ',
-        ),
-        'type' => 'number_integer',
-        'weight' => 78,
-      ),
-      'teaser' => array(
-        'label' => 'above',
-        'settings' => array(),
-        'type' => 'hidden',
-        'weight' => 0,
-      ),
-    ),
-    'entity_type' => 'node',
-    'field_name' => 'field_qa_id',
-    'label' => 'Id (old field)',
-    'required' => 0,
-    'settings' => array(
-      'entity_translation_sync' => FALSE,
-      'max' => '',
-      'min' => '',
-      'prefix' => '',
-      'suffix' => '',
-      'user_register_form' => FALSE,
-    ),
-    'widget' => array(
-      'active' => 0,
-      'module' => 'number',
-      'settings' => array(),
-      'type' => 'number',
-      'weight' => 14,
-    ),
-  );
-
   // Exported field_instance: 'node-quote_author-field_qa_is_tsitaatcom_user'
   $field_instances['node-quote_author-field_qa_is_tsitaatcom_user'] = array(
     'bundle' => 'quote_author',
@@ -1923,7 +1876,6 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Field required for migration. Can be deleted after migration.');
   t('ISBN');
   t('Id');
-  t('Id (old field)');
   t('Kategooria');
   t('Kes on/oli');
   t('Keskmine nimi');
@@ -1934,7 +1886,6 @@ function tsitaatcom_features_field_default_field_instances() {
   t('Name');
   t('Name en');
   t('Name et');
-  t('Need only during migration.');
   t('Nimi vabas vormis');
   t('Old field.');
   t('On quote save, we\'ll populate all the active translations to this field as serialized string for easier database query.');
